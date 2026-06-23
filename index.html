@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-/* ===== Design tokens (Summerfield Waldorf DS) ===== */
 *,*::before,*::after{box-sizing:border-box;}
 :root{
   --ink:#3d3633;--body:#55504c;--muted:#7a756f;
@@ -34,15 +33,17 @@ h2.ttl{font-size:clamp(1.7rem,3.6vw,2.5rem);}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px;}
 @media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;scroll-behavior:auto!important;}}
 
-/* ===== buttons ===== */
+/* buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.02em;padding:14px 32px;border-radius:999px;background:var(--orange);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;}
 .btn:hover{background:var(--orange-deep);transform:translateY(-1px);box-shadow:0 8px 20px rgba(210,125,41,.28);color:#fff;}
+.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;padding:13px 30px;border-radius:999px;background:transparent;border:1.5px solid rgba(255,255,255,.75);color:#fff;cursor:pointer;transition:background .2s;}
+.btn-ghost-light:hover{background:rgba(255,255,255,.16);color:#fff;}
 .btn-green{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.05em;padding:13px 28px;border-radius:999px;background:var(--ece);color:#fff;border:none;cursor:pointer;transition:background .2s;}
 .btn-green:hover{background:var(--ece-deep);color:#fff;}
 
-/* ===== header ===== */
+/* header */
 .site-head{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line);}
-.head-in{max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:22px;}
+.head-in{max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:26px;}
 .logo-mark{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
 .logo-sun{width:40px;height:40px;border-radius:50%;flex:0 0 auto;background:
   radial-gradient(circle at 50% 42%,var(--orange) 0 42%,transparent 43%),
@@ -50,10 +51,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   box-shadow:inset 0 0 0 1px rgba(154,162,51,.3);}
 .logo-txt{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--ink);letter-spacing:-.01em;line-height:1;}
 .logo-txt span{display:block;font-weight:500;font-size:.62rem;letter-spacing:.18em;color:var(--muted);margin-top:3px;}
-.search{display:flex;align-items:center;gap:9px;flex:0 1 240px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);}
-.search input{border:none;outline:none;background:transparent;font-family:var(--bodyf);font-size:14.5px;color:var(--ink);width:100%;}
-.search input::placeholder{color:var(--muted);}
-.main-nav{display:flex;align-items:center;gap:24px;margin:0 auto;}
+.main-nav{display:flex;align-items:center;gap:26px;margin:0 auto;}
 .main-nav a{font-family:var(--display);font-weight:700;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);}
 .main-nav a:hover{color:var(--ece-deep);}
 .head-actions{display:flex;align-items:center;gap:14px;flex:0 0 auto;}
@@ -67,16 +65,24 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .site-head.open .nav-toggle span:nth-child(2){opacity:0;}
 .site-head.open .nav-toggle span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
 
-/* ===== announcement ===== */
+/* announcement */
 .announce{background:var(--ece);color:#fff;text-align:center;padding:10px 16px;font-family:var(--display);font-size:13.5px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
 .announce a{color:#fff;font-weight:700;display:inline-flex;gap:6px;align-items:center;}
 .announce a:hover{text-decoration:underline;}
 .announce .sep{opacity:.55;}
 
-/* ===== hero ===== */
-.hero-img{width:100%;height:clamp(320px,40vw,548px);object-fit:cover;object-position:center 32%;}
+/* hero (text over image) */
+.hero{position:relative;height:clamp(440px,46vw,560px);overflow:hidden;}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(45,38,30,.84) 0%,rgba(45,38,30,.62) 34%,rgba(45,38,30,.12) 66%,rgba(45,38,30,0) 100%);}
+.hero .hero-in{position:relative;height:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px;display:flex;flex-direction:column;justify-content:center;}
+.hero .hero-c{max-width:540px;}
+.hero .eyebrow{color:#f3dcbb;margin-bottom:18px;}
+.hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3rem);font-family:var(--display);font-weight:700;line-height:1.1;letter-spacing:-.01em;margin:0 0 18px;}
+.hero p{color:rgba(255,255,255,.92);font-size:1.05rem;line-height:1.65;margin:0 0 28px;max-width:460px;}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;}
 
-/* ===== sections ===== */
+/* sections */
 .sec{padding:clamp(56px,7vw,88px) 0;}
 .sec.parch{background:var(--ece-soft);}
 .sec.white{background:#fff;}
@@ -86,7 +92,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 /* curriculum cards */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 40px;}
 .card .ic{width:78px;height:78px;border-radius:50%;background:rgba(154,162,51,.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-.card .ic svg{width:38px;height:38px;}
+.card .ic img{width:48px;height:48px;}
 .card h3{font-family:var(--display);font-weight:600;font-size:1.18rem;color:var(--ece-deep);margin:0 0 10px;}
 .card p{font-size:15px;line-height:1.7;color:var(--body);margin:0;}
 .card p strong{color:var(--ink);font-weight:600;}
@@ -99,11 +105,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .info-item p{font-size:14.5px;color:var(--body);margin:0;}
 .info-div{width:1px;background:rgba(61,54,51,.18);flex:0 0 auto;}
 
-/* two-column split */
+/* split */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-.media{border-radius:16px;overflow:hidden;background:var(--ece-soft);}
 
-/* gallery carousel */
+/* gallery */
 .gallery{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3.4;background:#e7ecd6;}
 .gallery .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s;}
 .gallery .slide.on{opacity:1;visibility:visible;}
@@ -122,8 +127,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .acc summary::-webkit-details-marker{display:none;}
 .acc summary:hover,.acc details[open]>summary{color:var(--ece-deep);}
 .acc .row{display:flex;align-items:center;gap:13px;}
-.acc .mini{width:34px;height:34px;border-radius:50%;background:rgba(154,162,51,.12);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
-.acc .mini svg{width:18px;height:18px;}
+.acc .mini{width:36px;height:36px;border-radius:50%;background:rgba(154,162,51,.12);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.acc .mini img{width:22px;height:22px;}
 .plus{flex:0 0 auto;width:16px;height:16px;position:relative;color:var(--ece);}
 .plus::before,.plus::after{content:'';position:absolute;background:currentColor;transition:transform .25s,opacity .25s;}
 .plus::before{top:50%;left:0;width:16px;height:2px;transform:translateY(-50%);}
@@ -145,7 +150,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 /* quote card */
 .qcard{background:var(--ece-soft);border:1.5px solid rgba(154,162,51,.45);border-radius:20px;padding:42px 40px;text-align:center;}
 .qcard .qt{font-family:var(--display);font-weight:600;font-size:1.18rem;line-height:1.5;color:var(--ink);margin:0 0 24px;}
-.qcard .avatar{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;object-fit:cover;background:var(--steel);}
+.qcard .avatar{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;object-fit:cover;}
 .qcard .nm{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink);}
 .qcard .role{font-size:13px;color:var(--muted);}
 
@@ -179,13 +184,13 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 .foot-col a:hover{text-decoration:underline;}
 .foot-bottom{max-width:var(--wrap);margin:38px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,.22);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;opacity:.9;}
 
-/* ===== responsive ===== */
+/* responsive */
 @media(max-width:980px){
   .cards{grid-template-columns:1fr 1fr;gap:40px 32px;}
   .foot-grid{grid-template-columns:1fr 1fr;gap:32px;}
 }
 @media(max-width:880px){
-  .main-nav,.head-actions,.search{display:none;}
+  .main-nav,.head-actions{display:none;}
   .nav-toggle{display:flex;}
   .head-in{padding:12px 22px;}
   .site-head.open .mobile-nav{display:flex;}
@@ -195,6 +200,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   .info-div{width:60%;height:1px;}
   .cta .split{grid-template-columns:1fr;}
   .cta-photo{order:-1;}
+  .hero .ov{background:linear-gradient(90deg,rgba(45,38,30,.86) 0%,rgba(45,38,30,.7) 55%,rgba(45,38,30,.4) 100%);}
 }
 @media(max-width:620px){
   .wrap{padding:0 22px;}
@@ -203,31 +209,28 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   .foot-grid{grid-template-columns:1fr;}
   .foot-bottom{flex-direction:column;}
   .gal-nav{justify-content:center;}
+  .hero .hero-in{padding:0 22px;}
+  .hero .btns{flex-direction:column;align-items:flex-start;}
+  .hero .btn,.hero .btn-ghost-light{width:100%;justify-content:center;}
 }
 
-/* mobile menu panel */
+/* mobile menu */
 .mobile-nav{display:none;flex-direction:column;gap:2px;padding:10px 22px 22px;border-top:1px solid var(--line);background:#fff;}
 .mobile-nav a{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink);padding:13px 10px;border-radius:10px;text-transform:uppercase;letter-spacing:.04em;}
 .mobile-nav a:hover{background:var(--ece-soft);}
-.mobile-nav .m-search{display:flex;align-items:center;gap:9px;border:1.5px solid var(--line);border-radius:999px;padding:11px 16px;margin-bottom:8px;color:var(--muted);}
-.mobile-nav .m-search input{border:none;outline:none;background:transparent;width:100%;font-family:var(--bodyf);}
 .mobile-nav .m-portal{margin-top:8px;border:1.5px solid var(--line);text-align:center;}
 .mobile-nav .m-inquire{margin-top:8px;background:var(--orange);color:#fff;text-align:center;}
 </style>
 </head>
 <body id="top">
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="site-head" id="siteHead">
   <div class="head-in">
     <a href="#top" class="logo-mark" aria-label="Summerfield Waldorf School &amp; Farm">
       <span class="logo-sun" aria-hidden="true"></span>
       <span class="logo-txt">Summerfield<span>WALDORF SCHOOL &amp; FARM</span></span>
     </a>
-    <label class="search" aria-label="Search">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a756f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      <input type="search" placeholder="Search…" />
-    </label>
     <nav class="main-nav">
       <a href="#">About</a><a href="#">Admissions</a><a href="#curriculum">Curriculum</a><a href="#">Programs</a><a href="#">Farm</a><a href="#">Giving</a>
     </nav>
@@ -238,23 +241,36 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-nav" id="mobileNav">
-    <label class="m-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a756f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" placeholder="Search…"/></label>
     <a href="#">About</a><a href="#">Admissions</a><a href="#curriculum">Curriculum</a><a href="#">Programs</a><a href="#">Farm</a><a href="#">Giving</a>
     <a href="#" class="m-portal">Parent Portal</a>
     <a href="#visit" class="m-inquire">Inquire</a>
   </nav>
 </header>
 
-<!-- ===== ANNOUNCEMENT ===== -->
+<!-- ANNOUNCEMENT -->
 <div class="announce">
   <span>Now welcoming families for the 2026–27 school year</span><span class="sep">·</span>
   <a href="#visit">Schedule a visit <span aria-hidden="true">→</span></a>
 </div>
 
-<!-- ===== HERO ===== -->
-<img class="hero-img" src="images/hero.jpg" alt="Summerfield kindergarten children playing together outdoors" />
+<!-- HERO -->
+<section class="hero">
+  <img class="bg" src="images/hero.jpg" alt="Summerfield kindergarten children playing together outdoors" />
+  <div class="ov"></div>
+  <div class="hero-in">
+    <div class="hero-c">
+      <p class="eyebrow">Ages 4–6 · Serving Sonoma County</p>
+      <h1>A Waldorf Kindergarten &amp; TK in Santa Rosa</h1>
+      <p>For more than 50 years, Summerfield's Waldorf kindergarten has welcomed children at a pivotal stage of growth — each rhythm, material, and lesson chosen with intention, supporting the developing mind and cultivating the focus, curiosity, and independence on which all future learning is built.</p>
+      <div class="btns">
+        <a href="#visit" class="btn">Book a tour</a>
+        <a href="#curriculum" class="btn-ghost-light">Explore our program</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- ===== CURRICULUM ===== -->
+<!-- CURRICULUM -->
 <section class="sec parch" id="curriculum">
   <div class="wrap">
     <div class="sec-head">
@@ -263,32 +279,32 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
     </div>
     <div class="cards">
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21c0-3 2-5 5-5"/><circle cx="14" cy="6" r="2.2"/><path d="M12.5 8.5 9 12l2 3 4-2 3 1"/><path d="M4 20c1.5-2 3-2.5 4-2.5"/></svg></span>
+        <span class="ic"><img src="images/icons/play.svg" alt="" width="48" height="48" /></span>
         <h3>Imaginative Learning</h3>
         <p>Free, imaginative play and purposeful work — kneading bread, sweeping, building, caring for the room. Through meaningful play, children learn to <strong>think, solve, and do.</strong></p>
       </article>
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 5 1V5a3 3 0 0 0-2-1z"/><path d="M9 8h2M8 13h3"/></svg></span>
+        <span class="ic"><img src="images/icons/brain.svg" alt="" width="48" height="48" /></span>
         <h3>Whole-brain, whole child</h3>
         <p>The brain's core architecture is wired in the early years. Our program builds rich connections across <strong>attention, memory, regulation, and language</strong> — developing the whole child, body and mind.</p>
       </article>
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-1.5 1-2 2-2h1a3 3 0 0 0 3-3 9 9 0 0 0-9-9z"/><circle cx="7.5" cy="11" r="1"/><circle cx="11" cy="7.5" r="1"/><circle cx="15.5" cy="9" r="1"/></svg></span>
+        <span class="ic"><img src="images/icons/arts.svg" alt="" width="48" height="48" /></span>
         <h3>Music &amp; the arts</h3>
         <p>Singing, painting, modeling, handwork — color, song, and story are woven through every day. The arts build <strong>focus, fine motor skills,</strong> and a lifelong love of beauty.</p>
       </article>
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="2.4"/><circle cx="16" cy="9.5" r="2"/><path d="M4 19c0-2.8 2.2-4.5 5-4.5s5 1.7 5 4.5"/><path d="M14.5 18.5c.2-2 1.8-3.2 3.8-3.2 1.6 0 3 .9 3.5 2.4"/></svg></span>
+        <span class="ic"><img src="images/icons/community.svg" alt="" width="48" height="48" /></span>
         <h3>Growing in community</h3>
         <p>Reading others, working through conflict, steadying big feelings. In a mixed-age classroom where teachers model calm, children develop the <strong>social fluency and self-regulation that last a lifetime.</strong></p>
       </article>
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-6"/><path d="M12 16c-4 0-7-2.5-7-6.5C5 6 8 3 12 3s7 3 7 6.5c0 4-3 6.5-7 6.5z"/><path d="M9.5 9.5 12 12l2.5-2.5"/></svg></span>
+        <span class="ic"><img src="images/icons/nature.svg" alt="" width="48" height="48" /></span>
         <h3>Nature &amp; the farm</h3>
         <p>Digging, planting, climbing, tending animals — outdoors in all weather, across every season. On the farm and beyond, children grow a <strong>rooted connection to the living world.</strong></p>
       </article>
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18 9l-3.4 3 1 4.6L12 14.6 8.4 16.6l1-4.6L6 9l4.2-1.4z"/><path d="M19 4l.7 1.6L21 6l-1.3.7L19 8l-.7-1.3L17 6l1.3-.4z"/></svg></span>
+        <span class="ic"><img src="images/icons/wonder.svg" alt="" width="48" height="48" /></span>
         <h3>Wonder &amp; connection</h3>
         <p>Wonder, merriment, awe — these are the gifts of early childhood, and we work to preserve them. Every child is <strong>known, met with patience,</strong> and woven into a community that cares for them.</p>
       </article>
@@ -296,22 +312,16 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== INFO BAND ===== -->
+<!-- INFO BAND -->
 <section class="info-band">
   <div class="wrap">
-    <div class="info-item">
-      <h3>4 or 5 day Programs</h3>
-      <p>Optional aftercare until 5:30&nbsp;pm</p>
-    </div>
+    <div class="info-item"><h3>4 or 5 day Programs</h3><p>Optional aftercare until 5:30&nbsp;pm</p></div>
     <div class="info-div"></div>
-    <div class="info-item">
-      <h3>Small classes</h3>
-      <p>1:11 teacher-to-child ratio, led by experienced, caring teachers.</p>
-    </div>
+    <div class="info-item"><h3>Small classes</h3><p>1:11 teacher-to-child ratio, led by experienced, caring teachers.</p></div>
   </div>
 </section>
 
-<!-- ===== A GENTLE STEP (gallery + accordion) ===== -->
+<!-- A GENTLE STEP -->
 <section class="sec white">
   <div class="wrap">
     <div class="split">
@@ -343,7 +353,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== NEUROSCIENCE ===== -->
+<!-- NEUROSCIENCE -->
 <section class="sec parch">
   <div class="wrap brain-wrap center">
     <img class="brain-img" src="images/brain.jpg" alt="Neural connections illuminate across a developing brain" />
@@ -367,7 +377,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== CAPACITIES + QUOTE ===== -->
+<!-- CAPACITIES + QUOTE -->
 <section class="sec white">
   <div class="wrap">
     <div class="split" style="align-items:flex-start">
@@ -376,18 +386,18 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
         <h2 class="ttl">The capacities a Waldorf education develops</h2>
         <p class="lede" style="margin-bottom:24px">Waldorf education follows a long arc — one that develops the knowledge, skills, and habits of mind students need to earn entry to competitive universities and pursue any field of study, while also nurturing the intellectual, emotional, social, creative, and practical capacities that help them flourish throughout life.</p>
         <div class="acc" id="capgroups">
-          <details open><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v16h5.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg></span>Thinking &amp; learning</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Curiosity and intrinsic love of learning</li><li>Independent thinking</li><li>Flexible, original problem solving</li><li>Synthesizing across disciplines</li><li>Thinking in systems</li><li>Comfort with not knowing</li></ul></div></details>
-          <details><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M5 21c0-3.5 3-5 7-5s7 1.5 7 5"/></svg></span>Self-regulation &amp; inner life</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Impulse control</li><li>Sustained attention &amp; stillness</li><li>Resilience &amp; frustration tolerance</li><li>Patience &amp; perseverance</li><li>Acting from inner conviction</li><li>Reflection &amp; introspection</li></ul></div></details>
-          <details><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12 7.7L3 21l1.8-6A8.5 8.5 0 1 1 21 11.5z"/></svg></span>Emotional &amp; social</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Emotional intelligence</li><li>Empathy &amp; compassion</li><li>Repairing relationships</li><li>Listening skills</li><li>Collaboration in community</li><li>Responsibility toward others</li></ul></div></details>
-          <details><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#c25b30" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2s1-2 2-2h1a3 3 0 0 0 3-3 9 9 0 0 0-9-9z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/></svg></span>Creative &amp; imaginative</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Imagination &amp; creative thinking</li><li>Symbolic &amp; metaphorical thinking</li><li>Artistic expression</li><li>Storytelling</li><li>Musicality</li><li>Aesthetic sensitivity</li></ul></div></details>
-          <details><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#84a5b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6M8 21l4-8 4 8M7 11h10"/></svg></span>Physical &amp; sensory</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Hand-eye coordination</li><li>Balance, rhythm &amp; coordination</li><li>Sensory integration</li><li>Spatial awareness</li><li>Practical life skills</li></ul></div></details>
-          <details><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M6 21c0-3.3 2.7-5 6-5s6 1.7 6 5"/><path d="M12 10v2"/></svg></span>Character &amp; purpose</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Quiet confidence</li><li>Sense of meaning &amp; purpose</li><li>Sense of vocation</li><li>Moral reasoning</li><li>Reverence, gratitude &amp; wonder</li><li>Initiative</li></ul></div></details>
-          <details><summary><span class="row"><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#767d27" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V11M12 11c0-3 2-6 6-6 0 3-2 6-6 6zM12 13c0-2.5-2-5-5-5 0 2.5 2 5 5 5z"/></svg></span>Relational &amp; environmental</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Dialogue across difference</li><li>Cultural appreciation</li><li>Civic responsibility</li><li>Stewardship of the land</li><li>Reverence for the living world</li><li>A sense of belonging</li></ul></div></details>
+          <details open><summary><span class="row"><span class="mini"><img src="images/icons/cap-thinking.svg" alt="" width="22" height="22" /></span>Thinking &amp; learning</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Curiosity and intrinsic love of learning</li><li>Independent thinking</li><li>Flexible and original problem solving</li><li>Capacity to synthesize across disciplines</li><li>Capacity to think in systems</li><li>Comfort with not knowing — and continuing to inquire</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-self.svg" alt="" width="22" height="22" /></span>Self-regulation &amp; inner life</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Self-regulation and impulse control</li><li>Stillness and sustained attention</li><li>Resilience and frustration tolerance</li><li>Patience, perseverance, and follow-through</li><li>Acting from inner conviction</li><li>Reflection and introspection</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-emotional.svg" alt="" width="22" height="22" /></span>Emotional &amp; social</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Emotional intelligence and attunement</li><li>Empathy and compassion</li><li>Holding complexity in relationships</li><li>Repairing relationships after conflict</li><li>Listening skills</li><li>Collaboration and community</li><li>Leadership balanced with cooperation</li><li>Responsibility toward others</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-creative.svg" alt="" width="22" height="22" /></span>Creative &amp; imaginative</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Imagination and creative thinking</li><li>Symbolic and metaphorical thinking</li><li>Imagining what does not yet exist</li><li>Artistic expression across modalities</li><li>Storytelling and verbal expression</li><li>Musicality and rhythmic awareness</li><li>Aesthetic sensitivity</li><li>Capacity for deep engagement</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-physical.svg" alt="" width="22" height="22" /></span>Physical &amp; sensory</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Hand-eye coordination and fine motor development</li><li>Balance, rhythm, and bodily coordination</li><li>Sensory integration</li><li>Spatial awareness</li><li>Practical life skills</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-character.svg" alt="" width="22" height="22" /></span>Character &amp; purpose</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Confidence without over-reliance on validation</li><li>Sense of meaning and purpose</li><li>Sense of vocation</li><li>Moral reasoning and ethical awareness</li><li>Reverence, gratitude, and wonder</li><li>Initiative and self-directed activity</li><li>Commitment to something larger</li><li>A developing personal identity</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-relational.svg" alt="" width="22" height="22" /></span>Relational &amp; environmental</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Healthy attachment to the natural world</li><li>Sensitivity to beauty and meaning</li><li>Stewardship of the earth</li><li>Genuine dialogue across difference</li><li>Cultural appreciation and respect</li><li>Civic responsibility</li></ul></div></details>
         </div>
       </div>
       <div class="qcard">
         <p class="qt">&ldquo;Being personally acquainted with a number of Waldorf students, I can say that they come closer to realizing their own potential than practically anyone I know.&rdquo;</p>
-        <span class="avatar" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--display);font-weight:700">JW</span>
+        <img class="avatar" src="images/weizenbaum.png" alt="Joseph Weizenbaum" />
         <div class="nm">Joseph Weizenbaum</div>
         <div class="role">Professor Emeritus<br/>Massachusetts Institute of Technology</div>
       </div>
@@ -395,7 +405,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
+<!-- TESTIMONIALS -->
 <section class="sec parch">
   <div class="wrap">
     <p class="eyebrow center" style="text-align:center">From our families</p>
@@ -415,7 +425,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section class="sec white">
   <div class="wrap">
     <div class="sec-head"><p class="eyebrow">Common Questions</p><h2 class="ttl">Frequently asked questions</h2></div>
@@ -436,7 +446,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- CTA -->
 <section class="sec parch cta" id="visit">
   <div class="wrap">
     <div class="split">
@@ -450,7 +460,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer class="site-foot">
   <div class="wrap foot-grid">
     <div class="foot-brand">
@@ -468,7 +478,6 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 </footer>
 
 <script>
-/* mobile nav */
 (function(){
   var h=document.getElementById('siteHead'),t=document.getElementById('navToggle'),n=document.getElementById('mobileNav');
   function set(o){h.classList.toggle('open',o);t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');}
@@ -476,7 +485,6 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   n.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
 })();
-/* simple carousel factory */
 function carousel(trackId,dotsId,prevSel,nextSel){
   var track=document.getElementById(trackId); if(!track)return;
   var slides=track.querySelectorAll('.slide,.t-slide'); var dotsWrap=document.getElementById(dotsId); var i=0;
