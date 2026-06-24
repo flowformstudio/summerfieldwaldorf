@@ -274,10 +274,12 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 }
 @media(max-width:620px){
   .wrap{padding:0 22px;}
-  .hero{min-height:auto;}
-  .hero .ov{background:linear-gradient(115deg,#f9faf2 0%,#f9faf2 56%,rgba(249,250,242,.8) 78%,rgba(249,250,242,.45) 100%);}
-  .hero .hero-in{padding:44px 22px;}
-  .hero h1{font-size:1.7rem;}
+  .hero{min-height:auto;display:block;background:#f9faf2;overflow:visible;}
+  .hero .bg{position:static;display:block;width:100%;height:clamp(230px,62vw,320px);object-fit:cover;object-position:center 38%;transform:none;}
+  .hero .ov{display:none;}
+  .hero .leaf-hero{display:none;}
+  .hero .hero-in{position:static;min-height:0;padding:clamp(48px,10vw,64px) 22px clamp(52px,11vw,68px);max-width:none;}
+  .hero h1{font-size:1.85rem;}
   .hero p{max-width:100%;}
   .hero .hero-c{max-width:100%;}
   .hero .eyebrow{letter-spacing:1.1px;}
