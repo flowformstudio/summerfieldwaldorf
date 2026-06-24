@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Waldorf Kindergarten &amp; TK in Santa Rosa | Summerfield</title>
+<meta name="description" content="A play-based, nature-rich Waldorf kindergarten and TK in Santa Rosa, California, for children ages 4–6, set on a working biodynamic farm in Sonoma County." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;}
+:root{
+  --ink:#3d3633;--body:#55504c;--muted:#7a756f;
+  --ece:#9aa233;--ece-deep:#767d27;--ece-bright:#a8b03e;--ece-soft:#f1f3df;
+  --orange:#e8923c;--orange-deep:#d27d29;--steel:#84a5b8;--steel-deep:#6c8fa3;--maroon:#8b3a3a;
+  --pale:#d6e3e6;--line:rgba(61,54,51,.12);
+  --display:'Poppins',-apple-system,'Segoe UI',Roboto,sans-serif;
+  --bodyf:'Mulish','Poppins',sans-serif;
+  --wrap:1160px;
+}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{overflow-x:hidden;}
+body{margin:0;font-family:var(--bodyf);color:var(--body);line-height:1.55;background:#fff;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:var(--ece-deep);text-decoration:none;}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);margin:0;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;}
+.eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ece-deep);font-weight:600;margin:0 0 14px;}
+.ttl{font-family:var(--display);font-weight:700;line-height:1.12;color:var(--ink);letter-spacing:-.01em;margin:0 0 18px;}
+h1.ttl{font-size:clamp(2rem,4.4vw,2.9rem);}
+h2.ttl{font-size:clamp(1.7rem,3.6vw,2.5rem);}
+.lede{font-size:1.05rem;line-height:1.5;color:var(--body);}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px;}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;scroll-behavior:auto!important;}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.02em;padding:14px 32px;border-radius:999px;background:var(--orange);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;}
+.btn:hover{background:var(--orange-deep);transform:translateY(-1px);box-shadow:0 8px 20px rgba(210,125,41,.28);color:#fff;}
+.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;padding:13px 30px;border-radius:999px;background:transparent;border:1.6px solid var(--orange);color:var(--orange);cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
+.btn-ghost-light:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
+.btn-green{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.05em;padding:13px 28px;border-radius:999px;background:var(--ece);color:#fff;border:none;cursor:pointer;transition:background .2s;}
+.btn-green:hover{background:var(--ece-deep);color:#fff;}
+.btn-outline-green{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.02em;padding:13px 28px;border-radius:999px;background:transparent;border:1.6px solid var(--ece);color:var(--ece-deep);transition:background .2s,border-color .2s;}
+.btn-outline-green:hover{background:rgba(154,162,51,.12);border-color:var(--ece-deep);}
+.btn-outline-green img{width:18px;height:18px;display:block;}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line);}
+.head-in{max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:26px;}
+.logo-mark{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
+.logo-sun{width:40px;height:40px;border-radius:50%;flex:0 0 auto;background:
+  radial-gradient(circle at 50% 42%,var(--orange) 0 42%,transparent 43%),
+  conic-gradient(from 0deg,var(--ece-bright),var(--ece) 50%,var(--ece-deep),var(--ece-bright));
+  box-shadow:inset 0 0 0 1px rgba(154,162,51,.3);}
+.logo-txt{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--ink);letter-spacing:-.01em;line-height:1;}
+.logo-txt span{display:block;font-weight:500;font-size:.62rem;letter-spacing:.18em;color:var(--muted);margin-top:3px;}
+.logo-img{height:46px;width:auto;display:block;}
+.footer-logo{height:84px;width:auto;display:block;margin-bottom:2px;}
+.main-nav{display:flex;align-items:center;gap:26px;margin:0 auto;}
+.main-nav a{font-family:var(--display);font-weight:700;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);}
+.main-nav a:hover{color:var(--orange-deep);}
+.head-actions{display:flex;align-items:center;gap:14px;flex:0 0 auto;}
+.portal{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,color .2s;}
+.portal:hover{background:var(--ink);border-color:var(--ink);color:#fff;}
+.inquire{background:var(--orange);color:#fff;font-family:var(--display);font-weight:600;font-size:14px;border-radius:999px;padding:11px 26px;}
+.inquire:hover{background:var(--orange-deep);color:#fff;}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:10px;border:none;background:transparent;cursor:pointer;margin-left:auto;}
+.nav-toggle span{display:block;height:2.5px;width:100%;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .2s;}
+.site-head.open .nav-toggle span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+.site-head.open .nav-toggle span:nth-child(2){opacity:0;}
+.site-head.open .nav-toggle span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+
+/* announcement */
+.announce{background:var(--ece);color:#fff;text-align:center;padding:10px 16px;font-family:var(--display);font-size:13.5px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
+.announce a{color:#fff;font-weight:700;display:inline-flex;gap:6px;align-items:center;}
+.announce a:hover{text-decoration:underline;}
+.announce .sep{opacity:.55;}
+
+/* hero (text over image) */
+.hero{position:relative;min-height:clamp(470px,48vw,576px);overflow:hidden;background:#f9faf2;}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(90deg,#f9faf2 0%,#f9faf2 30%,rgba(249,250,242,.86) 48%,rgba(249,250,242,.4) 66%,rgba(255,255,255,0) 84%);}
+.hero .hero-in{position:relative;min-height:inherit;max-width:var(--wrap);margin:0 auto;padding:clamp(54px,8vw,108px) 32px;display:flex;flex-direction:column;justify-content:center;}
+.hero .hero-c{max-width:540px;}
+.hero .eyebrow{color:var(--ece-deep);margin-bottom:18px;}
+.hero h1{color:var(--ink);font-size:clamp(2rem,4.4vw,2.7rem);font-family:var(--display);font-weight:700;line-height:1.12;letter-spacing:-.01em;margin:0 0 18px;}
+.hero p{color:var(--body);font-size:1rem;font-weight:500;line-height:1.7;margin:0 0 28px;max-width:480px;}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;}
+
+.leaf-hero{position:absolute;left:-26px;bottom:-100px;width:150px;opacity:.85;z-index:1;pointer-events:none;}
+@media(max-width:620px){.leaf-hero{display:none;}}
+
+/* cta ornament */
+.cta-ornament{position:absolute;right:-22px;bottom:-26px;width:188px;opacity:.95;z-index:0;pointer-events:none;}
+@media(max-width:620px){.cta-ornament{width:130px;right:-18px;}}
+
+/* decorative leaves */
+.sec{position:relative;overflow:hidden;}
+.sec>.wrap,.info-band>.wrap{position:relative;z-index:1;}
+.leaf-decor{position:absolute;z-index:0;pointer-events:none;opacity:.9;}
+.d-cur{top:120px;right:-52px;width:158px;transform:scaleX(-1) rotate(8deg);}
+.d-cap{left:-34px;top:200px;width:150px;transform:rotate(-14deg);}
+.d-tl{left:-22px;bottom:24px;width:170px;transform:rotate(-6deg);}
+.d-tr{right:-30px;top:70px;width:200px;transform:scaleX(-1) rotate(6deg);}
+@media(max-width:880px){.leaf-decor{display:none;}}
+
+/* sections */
+.sec{padding:clamp(56px,7vw,88px) 0;}
+.sec.parch{background:var(--ece-soft);}
+.sec.white{background:#fff;}
+.sec-head{text-align:center;max-width:720px;margin:0 auto clamp(40px,5vw,56px);}
+.sec-head .eyebrow{text-align:center;}
+
+/* curriculum cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 40px;}
+.card .ic{width:78px;height:78px;border-radius:50%;background:rgba(154,162,51,.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.card .ic img{width:48px;height:48px;}
+.card h3{font-family:var(--display);font-weight:600;font-size:1.18rem;color:var(--ece-deep);margin:0 0 10px;}
+.card p{font-size:15px;line-height:1.55;color:var(--body);margin:0;}
+.card p strong{color:var(--ink);font-weight:600;}
+
+/* info band */
+.info-band{background:var(--pale);position:relative;}
+.info-band .wave{position:absolute;left:0;width:100%;line-height:0;z-index:1;}
+.info-band .wave svg{display:block;width:100%;height:clamp(38px,5vw,62px);}
+.info-band .wave.top{top:-1px;}
+.info-band .wave.bottom{bottom:-1px;}
+.info-band .wrap{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:0;padding-top:clamp(70px,9vw,104px);padding-bottom:clamp(70px,9vw,104px);}
+.info-item{flex:1;text-align:center;padding:6px 40px;max-width:440px;}
+.info-item h3{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,2.6vw,1.7rem);color:var(--ink);margin:0 0 6px;}
+.info-item p{font-size:15px;font-weight:600;color:var(--ink);margin:0;}
+.info-div{width:1px;background:rgba(61,54,51,.18);flex:0 0 auto;}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+
+/* gallery */
+.gallery{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3.4;background:#e7ecd6;}
+.gallery .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s;}
+.gallery .slide.on{opacity:1;visibility:visible;}
+.gallery .slide img{width:100%;height:100%;object-fit:cover;}
+.gal-nav{display:flex;align-items:center;gap:18px;margin-top:18px;justify-content:center;}
+.round-btn{width:40px;height:40px;border:1.5px solid var(--line);background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:all .2s;}
+.round-btn:hover{background:var(--ece);color:#fff;border-color:var(--ece);}
+.dots{display:flex;gap:10px;}
+.dot{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:rgba(61,54,51,.2);cursor:pointer;transition:all .2s;}
+.dot.on{background:var(--ece);transform:scale(1.3);}
+
+/* accordion */
+.acc details{border-bottom:1px solid var(--line);}
+.acc details:first-child{border-top:1px solid var(--line);}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 4px;font-family:var(--display);font-weight:600;font-size:1rem;color:var(--ink);transition:color .2s;}
+.acc summary::-webkit-details-marker{display:none;}
+.acc summary:hover,.acc details[open]>summary{color:var(--ece-deep);}
+.acc .row{display:flex;align-items:center;gap:13px;}
+.acc .mini{width:36px;height:36px;border-radius:50%;background:rgba(154,162,51,.12);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.acc .mini img{width:22px;height:22px;}
+.plus{flex:0 0 auto;width:16px;height:16px;position:relative;color:var(--ece);}
+.plus::before,.plus::after{content:'';position:absolute;background:currentColor;transition:transform .25s,opacity .25s;}
+.plus::before{top:50%;left:0;width:16px;height:2px;transform:translateY(-50%);}
+.plus::after{left:50%;top:0;width:2px;height:16px;transform:translateX(-50%);}
+details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:0;}
+.acc .panel{padding:0 4px 20px 4px;}
+.acc .panel p{font-size:15.5px;line-height:1.6;color:var(--body);margin:0 0 .7rem;}
+.caplist{list-style:disc;margin:0;padding:6px 0 0 1.2em;}
+.caplist li{font-size:14.5px;color:var(--body);padding:4px 0;}
+
+#capgroups summary{padding:12px 4px;font-size:1rem;}
+#capgroups .panel{padding-bottom:14px;}
+#capgroups .caplist li{padding:3px 0;font-size:14px;}
+#capgroups .mini{width:40px;height:40px;background:transparent;}
+#capgroups .mini svg{width:26px;height:26px;}
+
+/* neuroscience */
+.brain-wrap{max-width:760px;margin:0 auto;}
+.brain-img{width:calc(100% + 64px);max-width:none;margin-left:-32px;height:clamp(320px,40vw,470px);object-fit:cover;object-position:center 12%;border-radius:18px;margin-bottom:30px;}
+.systems-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 44px;max-width:900px;margin:30px auto 0;}
+.sys h4{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--ece-deep);margin:0 0 2px;}
+.sys p{font-size:14px;line-height:1.5;color:var(--body);margin:0;}
+.center{text-align:center;}
+
+/* capacities row */
+.cap-row{display:grid;grid-template-columns:1fr .85fr;gap:38px;align-items:start;}
+@media(max-width:880px){.cap-row{grid-template-columns:1fr;gap:28px;}}
+
+/* quote card */
+.qcard{background:var(--ece-soft);border:1.5px solid rgba(154,162,51,.45);border-radius:20px;padding:34px 26px;text-align:center;align-self:start;}
+.qcard .qt{font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.5;color:var(--ink);margin:0 0 24px;}
+.qcard .avatar{width:104px;height:104px;border-radius:50%;margin:0 auto 16px;object-fit:cover;}
+.qcard .nm{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink);}
+.qcard .role{font-size:13px;color:var(--muted);}
+
+/* testimonials */
+.testi{position:relative;text-align:center;max-width:860px;margin:0 auto;}
+.qmark{font-family:var(--display);font-size:4rem;line-height:.5;color:var(--ece);opacity:.55;margin-bottom:18px;}
+.t-track{position:relative;min-height:210px;}
+.t-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s;}
+.t-slide.on{position:relative;opacity:1;visibility:visible;}
+.t-q{font-family:var(--display);font-weight:500;font-size:clamp(1.2rem,2.4vw,1.55rem);line-height:1.5;color:var(--ink);margin:0 0 16px;}
+.t-q em{font-style:normal;color:var(--ece-deep);}
+.t-attr{font-size:13.5px;color:var(--muted);}
+.t-nav{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:26px;}
+.t-nav .round-btn{background:transparent;}
+.t-nav .round-btn:hover{background:var(--ece);}
+
+/* go-deeper under Learn more */
+.deeper{display:block;}
+.deeper>summary{list-style:none;display:inline-block;cursor:pointer;}
+.deeper>summary::-webkit-details-marker{display:none;}
+.btn-outline-green img{transition:transform .3s ease;}
+.deeper[open]>summary .btn-outline-green img{transform:rotate(180deg);}
+.deeper-body{max-width:700px;margin-top:30px;text-align:left;}
+.deeper-body h3{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--ink);margin:28px 0 10px;}
+.deeper-body p{font-size:15.5px;line-height:1.6;color:var(--body);margin:0 0 1rem;}
+.deeper-body .cite-head{font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ece-deep);font-weight:600;margin:28px 0 12px;}
+.deeper-body .cite{font-size:14px;line-height:1.5;margin:0 0 12px;}
+.deeper-body .cite a{color:var(--ece-deep);font-weight:600;border-bottom:1px solid rgba(118,125,39,.4);}
+.deeper-body .cite .meta{color:var(--muted);}
+
+/* faq extras */
+.schedule{list-style:none;margin:0 0 1rem;padding:0;}
+.schedule li{padding:6px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--body);}
+.faq-note{font-style:italic;color:var(--muted);font-size:14px;margin-top:10px;}
+.tuition h4{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ece-deep);margin:0 0 12px;}
+.tu-line{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;}
+.tu-line span:first-child{font-weight:600;color:var(--ink);}
+.tu-line span:last-child{color:var(--body);white-space:nowrap;}
+.go-deeper{margin-top:14px;}
+.go-deeper b{display:block;font-family:var(--display);color:var(--ece-deep);font-size:13px;letter-spacing:.04em;margin-bottom:4px;}
+
+/* faq */
+.faq{max-width:840px;margin:0 auto;}
+
+/* cta */
+.cta .split{align-items:center;}
+.cta-photo{border-radius:18px;overflow:hidden;aspect-ratio:5/3.6;}
+.cta-photo img{width:100%;height:100%;object-fit:cover;}
+
+/* footer */
+.site-foot{background:var(--steel);color:#fff;padding:56px 0 30px;}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
+.foot-brand .logo-txt,.foot-brand .logo-txt span{color:#fff;}
+.foot-brand .logo-txt span{opacity:.85;}
+.foot-brand p{font-size:14px;line-height:1.7;opacity:.95;margin:16px 0 0;max-width:280px;}
+.foot-col h4{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px;color:#fff;}
+.foot-col a,.foot-col p{display:block;color:#fff;font-size:14.5px;opacity:.94;margin-bottom:11px;}
+.foot-col a:hover{text-decoration:underline;}
+.foot-bottom{max-width:var(--wrap);margin:38px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,.22);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;opacity:.9;}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+/* responsive */
+@media(max-width:980px){
+  .cards{grid-template-columns:1fr 1fr;gap:40px 32px;}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:880px){
+  .brain-img{width:100%;margin-left:0;}
+  .main-nav,.head-actions{display:none;}
+  .nav-toggle{display:flex;}
+  .head-in{padding:12px 22px;}
+  .site-head.open .mobile-nav{display:flex;}
+  .split{grid-template-columns:1fr;gap:32px;}
+  .systems-grid{grid-template-columns:1fr;gap:22px;}
+  .info-band .wrap{flex-direction:column;gap:24px;align-items:center;}
+  .info-div{width:60%;height:1px;}
+  .cta .split{grid-template-columns:1fr;}
+  .cta-photo{order:-1;}
+  .hero .ov{background:linear-gradient(90deg,#f9faf2 0%,#f9faf2 54%,rgba(249,250,242,.72) 76%,rgba(255,255,255,0) 100%);}
+}
+@media(max-width:620px){
+  .wrap{padding:0 22px;}
+  .hero{min-height:auto;}
+  .hero .ov{background:linear-gradient(115deg,#f9faf2 0%,#f9faf2 56%,rgba(249,250,242,.8) 78%,rgba(249,250,242,.45) 100%);}
+  .hero .hero-in{padding:44px 22px;}
+  .hero h1{font-size:1.7rem;}
+  .hero p{max-width:100%;}
+  .hero .hero-c{max-width:100%;}
+  .hero .eyebrow{letter-spacing:1.1px;}
+  .cards{grid-template-columns:1fr;gap:34px;}
+  .caplist{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;}
+  .gal-nav{justify-content:center;}
+  .hero .hero-in{padding:0 22px;}
+  .hero .btns{flex-direction:column;align-items:flex-start;}
+  .hero .btn,.hero .btn-ghost-light{width:100%;justify-content:center;}
+}
+
+/* mobile menu */
+.mobile-nav{display:none;flex-direction:column;gap:2px;padding:10px 22px 22px;border-top:1px solid var(--line);background:#fff;}
+.mobile-nav a{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink);padding:13px 10px;border-radius:10px;text-transform:uppercase;letter-spacing:.04em;}
+.mobile-nav a:hover{background:var(--ece-soft);}
+.mobile-nav .m-portal{margin-top:8px;border:1.5px solid var(--line);text-align:center;}
+.mobile-nav .m-inquire{margin-top:8px;background:var(--orange);color:#fff;text-align:center;}
+</style>
+</head>
+<body id="top">
+
+<!-- HEADER -->
+<header class="site-head" id="siteHead">
+  <div class="head-in">
+    <a href="#top" class="logo-mark" aria-label="Summerfield Waldorf School &amp; Farm">
+      <img class="logo-img" src="https://flowformstudio.github.io/summerfieldwaldorf/images/logo.svg" alt="Summerfield Waldorf School &amp; Farm" />
+    </a>
+    <nav class="main-nav">
+      <a href="#">About</a><a href="#">Admissions</a><a href="#curriculum">Curriculum</a><a href="#">Programs</a><a href="#">Farm</a><a href="#">Giving</a>
+    </nav>
+    <div class="head-actions">
+      <a href="#" class="portal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.4"/><path d="M5.5 19c0-3.4 2.9-5.2 6.5-5.2s6.5 1.8 6.5 5.2"/></svg>Parent Portal</a>
+      <a href="#visit" class="inquire">Inquire</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#">About</a><a href="#">Admissions</a><a href="#curriculum">Curriculum</a><a href="#">Programs</a><a href="#">Farm</a><a href="#">Giving</a>
+    <a href="#" class="m-portal">Parent Portal</a>
+    <a href="#visit" class="m-inquire">Inquire</a>
+  </nav>
+</header>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce">
+  <span>Now welcoming families for the 2026–27 school year</span><span class="sep">·</span>
+  <a href="#visit">Schedule a visit <span aria-hidden="true">→</span></a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="leaf-hero" src="https://flowformstudio.github.io/summerfieldwaldorf/images/decor/leaf3.svg" alt="" aria-hidden="true" />
+  <img class="bg" src="https://flowformstudio.github.io/summerfieldwaldorf/images/hero.jpg" alt="Summerfield kindergarten children playing together outdoors" />
+  <div class="ov"></div>
+  <div class="hero-in">
+    <div class="hero-c">
+      <p class="eyebrow">Ages 4–6 · Serving Sonoma County</p>
+      <h1>A Waldorf Kindergarten &amp; TK in Santa Rosa</h1>
+      <p>For more than 50 years, Summerfield’s Waldorf kindergarten has met children at a pivotal stage of growth. Each rhythm, material, and lesson is chosen with intention, supporting the developing mind and cultivating the focus, curiosity, and independence on which all future learning is built.</p>
+      <div class="btns">
+        <a href="#visit" class="btn">Book a tour</a>
+        <a href="#curriculum" class="btn-ghost-light">Explore our programs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="sec parch" id="curriculum"><img class="leaf-decor d-cur" src="https://flowformstudio.github.io/summerfieldwaldorf/images/decor/leaf1.svg" alt="" aria-hidden="true" />
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Kindergarten Curriculum</p>
+      <h2 class="ttl">Core Elements of Our Program</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="ic"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/play.svg" alt="" width="48" height="48" /></span>
+        <h3>Imaginative Learning</h3>
+        <p>Free, imaginative play and purposeful work — kneading bread, sweeping, building, caring for the room. Through meaningful play, children learn to <strong>think, solve, and do.</strong></p>
+      </article>
+      <article class="card">
+        <span class="ic"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/brain.svg" alt="" width="48" height="48" /></span>
+        <h3>Whole-Brain, Whole Child</h3>
+        <p>The brain's core architecture is wired in the early years. Our program builds rich connections across <strong>attention, memory, regulation, and language</strong> — developing the whole child, body and mind, on which all later learning depends.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/arts.svg" alt="" width="48" height="48" /></span>
+        <h3>Music &amp; the Arts</h3>
+        <p>Singing, painting, modeling, handwork — color, song, and story are woven through every day. The arts build <strong>focus, fine motor skills,</strong> and a lifelong love of beauty.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/community.svg" alt="" width="48" height="48" /></span>
+        <h3>Growing in Community</h3>
+        <p>Reading others, working through conflict, steadying big feelings. In a mixed-age classroom where teachers model calm and gently guide, children develop the <strong>social fluency and self-regulation that last a lifetime.</strong></p>
+      </article>
+      <article class="card">
+        <span class="ic"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/nature.svg" alt="" width="48" height="48" /></span>
+        <h3>Nature &amp; the Farm</h3>
+        <p>Digging, planting, climbing, tending animals — outdoors in all weather, across every season. On the farm and beyond, children grow a <strong>rooted connection to the living world.</strong></p>
+      </article>
+      <article class="card">
+        <span class="ic"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/wonder.svg" alt="" width="48" height="48" /></span>
+        <h3>Wonder &amp; Connection</h3>
+        <p>Wonder, merriment, awe — these are the gifts of early childhood, and we work to preserve them. Every child is <strong>known, met with patience,</strong> and woven into a community that cares for them.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BAND -->
+<section class="info-band">
+  <div class="wave top" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0 0 H1200 V30 C 940 64, 620 4, 320 32 C 190 44, 90 44, 0 37 Z" fill="#f1f3df"/></svg></div>
+  <div class="wave bottom" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0 60 H1200 V30 C 940 -4, 620 56, 320 28 C 190 16, 90 16, 0 23 Z" fill="#ffffff"/></svg></div>
+  <div class="wrap">
+    <div class="info-item"><h3>4 or 5 Day Programs</h3><p>(optional aftercare until 5:30&nbsp;pm)</p></div>
+    <div class="info-div"></div>
+    <div class="info-item"><h3>Small Classes</h3><p>1:11 teacher to child ratio, led by experienced, caring teachers.</p></div>
+  </div>
+</section>
+
+<!-- A GENTLE STEP -->
+<section class="sec white">
+  <div class="wrap">
+    <div class="split" style="align-items:flex-start">
+      <div>
+        <div class="gallery" id="gallery">
+          <div class="slide on"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/farm.jpg" alt="Wide view of the biodynamic farm with greenhouse and oak tree" /></div>
+          <div class="slide"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/tire-swings.jpg" alt="Children on tire swings under the oaks" /></div>
+          <div class="slide"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/raking-leaves.jpg" alt="Group of children raking leaves with a teacher in autumn" /></div>
+          <div class="slide"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/monkey-bars.jpg" alt="A child swinging across monkey bars in the play yard" /></div>
+        </div>
+        <div class="gal-nav">
+          <button class="round-btn" data-gal="prev" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="dots" id="galDots"></div>
+          <button class="round-btn" data-gal="next" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Our Kindergarten</p>
+        <h2 class="ttl">A Gentle Step Into a Wider World</h2>
+        <p class="lede" style="margin-bottom:22px">The kindergarten years carry a child from early childhood toward the threshold of formal learning. We've shaped every detail of the day — and every corner of the classroom — to honor what that passage asks of them.</p>
+        <div class="acc">
+          <details><summary>Preparing for Learning, the Waldorf Way <span class="plus"></span></summary><div class="panel"><p>Our combined TK and kindergarten classroom brings together children ages 4 to 6 in one room, resulting in one of the quiet but transformative gifts of Waldorf early childhood. Younger children learn by watching the older ones — how to thread a needle, how to wait for a turn at the painting easel, how to carry a task through from start to finish. They aspire, and slowly and naturally they grow into doing these things themselves.</p><p>The eldest children, in their final year, step fully into roles of leadership: guiding a younger friend through a hard moment, organizing a game, being trusted with the day’s most important jobs. Their confidence and capability flourish in ways no single-age classroom can offer, and this final year gently prepares them for the transition into first grade.</p><p>Because children stay with the same teacher and the same circle of friends across their TK and kindergarten years, what unfolds is a deep, lived sense of belonging — something parents often describe as the relief of knowing their child is truly known.</p></div></details>
+          <details><summary>The Gift of Mixed Ages in TK and Kindergarten <span class="plus"></span></summary><div class="panel"><p>Our combined TK and kindergarten classroom brings together children ages 4 to 6 in one room, resulting in one of the quiet but transformative gifts of Waldorf early childhood. Younger children learn by watching the older ones — how to thread a needle, how to wait for a turn at the painting easel, how to carry a task through from start to finish. They aspire, and slowly and naturally they grow into doing these things themselves.</p><p>The eldest children, in their final year, step fully into roles of leadership: guiding a younger friend through a hard moment, organizing a game, being trusted with the day’s most important jobs. Their confidence and capability flourish in ways no single-age classroom can offer, and this final year gently prepares them for the transition into first grade.</p><p>Because children stay with the same teacher and the same circle of friends across their TK and kindergarten years, what unfolds is a deep, lived sense of belonging — something parents often describe as the relief of knowing their child is truly known.</p></div></details>
+          <details><summary>Connection to Nature <span class="plus"></span></summary><div class="panel"><p>Our children spend long, unhurried hours outdoors — in every season, in nearly every weather.</p><p>Their days unfold beneath a canopy of old oaks, on a playscape that blends natural materials with thoughtfully built structures. A wooden platform becomes a ship, a stage, a bench for storytelling; a stump becomes a stool or a stepping stone; mud-pie kitchens invite small hands to mix, pour, and serve. A child outdoors is a child becoming themselves — climbing teaches the body where it ends and the world begins, and watching a beetle cross a stone is, for a five-year-old, a serious scientific endeavor.</p><p>Just beyond the playscape lies our working biodynamic farm, where the children visit each week. They feed the chickens, gather warm eggs from the nest, greet the sheep and goats, and pull carrots they helped plant from the earth. The farm makes the cycles of food, work, and care into something visible, tangible, and intimately their own.</p><p>Across the year, the same beloved ground offers new gifts: acorns to gather and leaves to leap into in autumn, frost to inspect in winter, puddles to splash in spring, and a humming summer garden grown by the children themselves.</p></div></details>
+          <details><summary>Festivals and the Life of the Community <span class="plus"></span></summary><div class="panel"><p>Children in our TK and kindergarten grow up inside a year shaped by seasonal festivals. We mark Michaelmas in early autumn with stories of courage and a shared harvest meal. In late autumn, we walk together at dusk carrying paper lanterns the children have made, singing softly as the light grows smaller around us — a quiet practice of carrying our own light into the darkening months. December brings the candlelit path of the Advent spiral; spring brings flower crowns and ribboned poles for May Day; summer ends with water play and tender goodbyes to the children who are moving up to first grade.</p><p>These festivals are more than performances or productions — not tied to any one faith tradition — they are gentle, seasonal rituals, welcoming families of every background. They give children a felt sense of the year’s shape — a deep memory of how darkness gives way to light, how seed becomes harvest, how community gathers and disperses and gathers again. By the time a child leaves our kindergarten, the rhythm of the year is something they carry inside them.</p><p>What grows around these festivals is not a calendar of events but a community — a web of relationships that holds your child, and your family, well beyond any single year.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEUROSCIENCE -->
+<section class="sec parch">
+  <div class="wrap brain-wrap">
+    <img class="brain-img" src="https://flowformstudio.github.io/summerfieldwaldorf/images/brain.jpg" alt="A child with a tree-branching mind amid books, patterns, and ideas" />
+    <p class="eyebrow">Early Childhood</p>
+    <h2 class="ttl" style="text-align:left">The Neuroscience of Our Early Childhood Approach</h2>
+    <p class="lede" style="margin-bottom:18px">Early childhood is a period of rapid brain development. In these years the brain forms synaptic connections faster than at any later stage and prunes those it doesn’t use, laying the structural foundation for cognition, emotional regulation, and lifelong learning. Early experience doesn’t simply add knowledge—it shapes the architecture on which all later learning is built.</p>
+    <p class="lede" style="margin-bottom:0">This is why the texture of a child’s days matters so much. Summerfield’s early childhood programs are intentionally designed to support the strength and future capacity of that architecture. A steady daily rhythm, natural materials, and long hours of movement, imitation, and self-directed play are each chosen to engage the systems the developing brain is building:</p>
+    <h3 class="ttl" style="text-align:left;font-size:1.4rem;margin:44px 0 22px">The Systems We Intentionally Strengthen</h3>
+    <div class="systems-grid" style="max-width:none;margin:0">
+      <div class="sys"><h4>Executive Function &amp; Attention</h4><p>Focus, working memory, impulse control, flexible thinking. Supported by open-ended play, real responsibilities, and activities that require planning and persistence.</p></div>
+      <div class="sys"><h4>Emotional Regulation</h4><p>Processing emotion, managing stress, returning to a regulated state. Early experience shapes a child’s developing capacity to regulate strong affect and recover from frustration.</p></div>
+      <div class="sys"><h4>Sensory Integration</h4><p>Organizing input from the body and environment: touch, movement, balance, spatial awareness. This foundational capacity underlies attention, regulation, and later academic skills.</p></div>
+      <div class="sys"><h4>Motor Control</h4><p>Movement, balance, coordination, fine motor control. Motor and cognitive development are closely linked; in early childhood, movement is a primary mechanism of learning.</p></div>
+      <div class="sys"><h4>Language &amp; Communication</h4><p>Comprehension, expression, vocabulary, symbolic thinking. Develops through conversation, storytelling, song, and meaningful interaction rather than rote instruction.</p></div>
+      <div class="sys"><h4>Social Cognition</h4><p>Empathy, perspective-taking, collaboration. Established through direct social experience rather than explicit instruction.</p></div>
+      <div class="sys"><h4>Memory</h4><p>Encoding and retrieving meaningful experience. Early memory is supported by emotional salience, context, and narrative rather than repetition.</p></div>
+      <div class="sys"><h4>Reward &amp; Motivation</h4><p>Curiosity, engagement, intrinsic motivation. Experiences of mastery and agency reinforce the association between effort and reward.</p></div>
+    </div>
+    <div style="margin-top:38px"><details class="deeper"><summary><span class="btn-outline-green">Learn more <img src="https://flowformstudio.github.io/summerfieldwaldorf/images/icons/chevron-down.svg" alt="" /></span></summary><div class="deeper-body"><h3>How those systems integrate</h3><p>These systems—memory, language, motor control, emotion, attention, and social cognition—don't develop in isolation. They mature in relationship with one another, each scaffolding the rest, and the brain spends these early years building the connections between them. This is neural integration: the wiring that lets separate capacities work together as one coordinated whole. A child whose attention, memory, and emotional regulation are richly connected isn't simply more capable in each—they can draw on all of them at once, fluidly, when something new is asked of them.</p><p>Integration is built through experience, and the research is consistent about what kind: experiences that engage several systems at the same time. This is what self-directed activity does so well. A child absorbed in cooperative play is coordinating movement, holding attention, exercising memory, reading social cues, and steadying strong feelings all at once—the very conditions under which the brain's systems knit together. Our days are built to create those conditions, not to drill each skill apart from the others.</p><p>Waldorf education has worked this way for over a century, long before neuroscience could explain why. The rhythms it has always held to—the primacy of movement, imitation, and unhurried play—are what contemporary research now describes in the language of synapses and integration. At Summerfield we hold both: a time-tested approach to the early years, and a growing body of science that affirms and sharpens it.</p><h3>The case for patience with academics</h3><p>These developmental principles inform our caution regarding the early introduction of formal academic instruction. Direct drilling of literacy and numeracy in four- to six-year-olds can yield measurable short-term gains, but often at the cost of the broader neural integration the brain is primed to undergo during this period. Skills acquired before their developmental prerequisites are in place tend to be less durable; the capacities established through play, movement, narrative, and direct experience provide a more stable foundation.</p><p>The risks extend beyond durability. Early academic advantages frequently fade as peers catch up, and in some cases the initial gains reverse over time. More concerning are the less visible costs: pressure to perform abstract tasks before a child is developmentally ready can introduce stress, frustration, and an early sense of failure that shapes a child's relationship with learning itself. It can quietly erode the curiosity and intrinsic motivation that sustain learning over the long term. And every hour spent on premature drills is an hour not spent on the play, movement, and social experience that build the very foundation those academic skills will later depend on.</p><p>Summerfield's early childhood programs are designed to protect this developmental window—not by delaying learning, but by sequencing it in accordance with how the brain develops. The aim is not a later start, but a more durable foundation for the academic work ahead—and for everything a full life asks of a person.</p><p class="cite-head">Research &amp; Studies</p><p class="cite"><a href="https://files.eric.ed.gov/fulltext/ED654975.pdf" target="_blank" rel="noopener">Effects of a Statewide Prekindergarten Program Through Sixth Grade</a> <span class="meta">— Developmental Psychology; Durkin, Lipsey, Farran &amp; Wiesen, 2022. In a randomized study of nearly 3,000 Tennessee children, early gains had faded by kindergarten and reversed into a measurable disadvantage by third grade that persisted through sixth.</span></p><p class="cite"><a href="https://www.edweek.org/teaching-learning/studies-explore-reasons-for-fade-out-effect/2016/01" target="_blank" rel="noopener">Studies Explore Reasons for the "Fade-Out" Effect</a> <span class="meta">— Education Week; Sarah D. Sparks, 2016. Head Start, Tennessee pre-K, and the Perry Preschool Project all produced early academic gains that regressed as children moved through elementary school.</span></p><p class="cite"><a href="https://journals.sagepub.com/doi/10.1177/1529100620915848" target="_blank" rel="noopener">Persistence and Fade-Out of Educational-Intervention Effects</a> <span class="meta">— Psychological Science in the Public Interest; Bailey, Duncan et al., 2020. A major review concludes that fade-out is widespread and real: early skill gains commonly shrink as untreated peers catch up.</span></p><p class="cite"><a href="https://www.tandfonline.com/doi/full/10.1080/09669760.2025.2481759" target="_blank" rel="noopener">Premature Schoolification During Early Childhood Hinders Later Academic Success</a> <span class="meta">— International Journal of Early Years Education, 2025. Argues that pushing school-style academics onto four- and five-year-olds imposes pressure that can cause mental-health problems and undermine the very outcomes it aims to improve.</span></p><p class="cite"><a href="https://www.sciencedirect.com/science/article/pii/S0165032723008510" target="_blank" rel="noopener">The Association Between Academic Pressure and Adolescent Mental Health Problems: A Systematic Review</a> <span class="meta">— Journal of Affective Disorders; Steare et al., 2023. Across 52 studies, 48 found academic pressure positively associated with at least one mental-health outcome—depression, anxiety, self-harm, or suicidality.</span></p><p class="cite"><a href="https://www.mdpi.com/2076-328X/16/1/54" target="_blank" rel="noopener">Understanding Motivation in Early Childhood: Disentangling the Links Among Curiosity, Mindset, and Goals</a> <span class="meta">— Behavioral Sciences; Hutchins &amp; Jirout, 2025. Children's academic motivation tends to decline with each successive grade beginning in early elementary school, making the early years a critical window for protecting it.</span></p><p class="cite"><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.720225/full" target="_blank" rel="noopener">Promoting Executive Function Skills in Preschoolers Using a Play-Based Program</a> <span class="meta">— Frontiers in Psychology; Gibb et al., 2021. A play-based program improved preschoolers' executive function, language, and motor skills—and well-developed executive function is a strong predictor of later academic and life success.</span></p><p class="cite"><a href="https://www.rti.org/rti-press-publication/the-multiple-benefits-of-motor-competence-skills-in-early-childhood" target="_blank" rel="noopener">The Multiple Benefits of Motor Competence Skills in Early Childhood</a> <span class="meta">— RTI Press; Hudson &amp; Willoughby, 2021. Drawing on the Kids Activity and Learning Study, children whose motor skills improved most over a school year also showed the largest gains in executive function and numeracy—evidence that motor and cognitive development advance together.</span></p><p class="cite-head">Articles &amp; Commentary</p><p class="cite"><a href="https://www.theatlantic.com/magazine/archive/2016/01/the-new-preschool-is-crushing-kids/419139/" target="_blank" rel="noopener">The New Preschool Is Crushing Kids</a> <span class="meta">— The Atlantic; Erika Christakis, 2016. Between 1998 and 2010, the share of kindergarten teachers expecting children to read by year's end rose from 30 to 80 percent—what researchers described as kindergarten becoming the new first grade.</span></p><p class="cite"><a href="https://www.psychologytoday.com/us/blog/freedom-to-learn/201505/early-academic-training-produces-long-term-harm" target="_blank" rel="noopener">Early Academic Training Produces Long-Term Harm</a> <span class="meta">— Psychology Today; Peter Gray, 2015. Reviews studies finding that early academic gains wash out within one to three years and, in some cases, reverse—with lasting costs to social and emotional development.</span></p><p class="cite"><a href="https://www.washingtonpost.com/news/answer-sheet/wp/2015/08/17/why-pushing-kids-to-learn-too-much-too-soon-is-counterproductive/" target="_blank" rel="noopener">Why Pushing Kids to Learn Too Much Too Soon Is Counterproductive</a> <span class="meta">— The Washington Post; Valerie Strauss, 2015. An adapted excerpt from a Vanderbilt professor's book argues there is no evidence that accelerating intellectual development helps—and that it may instead backfire.</span></p><p class="cite"><a href="https://www.edweek.org/teaching-learning/play-based-learning-in-kindergarten-is-making-a-comeback-heres-what-it-means/2025/10" target="_blank" rel="noopener">Play-Based Learning in Kindergarten Is Making a Comeback</a> <span class="meta">— Education Week, 2025. As pushback against academic kindergarten grows, states including Connecticut, New Hampshire, Oklahoma, and Oregon are pushing for a return to play in the early grades.</span></p><p class="cite"><a href="https://www.kpbs.org/news/education/2024/01/29/the-way-kids-play-has-quietly-transformed-heres-why-that-matters" target="_blank" rel="noopener">The Way Kids Play Has Quietly Transformed</a> <span class="meta">— KPBS, 2024. After No Child Left Behind, homework increased, kindergartens devoted less time to play, and the school year lengthened—reshaping childhood dramatically.</span></p><p class="cite"><a href="https://www.psychologytoday.com/us/blog/risking-it/202105/all-work-and-no-play-in-kindergarten" target="_blank" rel="noopener">All Work and No Play in Kindergarten</a> <span class="meta">— Psychology Today, 2021. As kindergarten grows more academic and anxiety rises among young children, free play—a key source of independence and resilience—is being squeezed out.</span></p><p class="cite"><a href="https://www.psychologytoday.com/us/blog/the-science-play/202205/the-loss-play-and-recent-efforts-sound-the-alarm" target="_blank" rel="noopener">The Loss of Play and Recent Efforts to Sound the Alarm</a> <span class="meta">— Psychology Today, 2022. Reports that children have lost an estimated 12 hours of play per week on average, with the decline evident in both homes and schools.</span></p><p class="cite"><a href="https://www.edweek.org/teaching-learning/what-one-researcher-saw-inside-29-kindergarten-classrooms/2026/04" target="_blank" rel="noopener">What One Researcher Saw Inside 29 Kindergarten Classrooms</a> <span class="meta">— Education Week, 2026. Researcher Susan Engel finds today's kindergartens dominated by reading-readiness skills and checklists, displacing the play and exploration that once defined the year.</span></p></div></details></div>
+  </div>
+</section>
+
+<!-- CAPACITIES + QUOTE -->
+<section class="sec white"><img class="leaf-decor d-cap" src="https://flowformstudio.github.io/summerfieldwaldorf/images/decor/leaf2.svg" alt="" aria-hidden="true" />
+  <div class="wrap" style="max-width:760px">
+    <p class="eyebrow">A different kind of education</p>
+    <h2 class="ttl" style="text-align:left">The Capacities a Waldorf Education Develops</h2>
+    <p class="lede" style="margin-bottom:34px">Waldorf education follows a long arc — one that develops the knowledge, skills, and habits of mind students need to earn entry to competitive universities and pursue any field of study, while also nurturing the intellectual, emotional, social, creative, and practical capacities that help them flourish throughout life.</p>
+    <div class="cap-row">
+      <div class="acc" id="capgroups">
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M27.9666 17.2264C28.08 13.6044 27.9046 9.97872 27.4421 6.38837C27.4604 6.13217 27.4604 5.87486 27.4421 5.61866C27.279 4.78688 24.9366 4.3772 23.946 4.27788C23.855 4.26733 23.7637 4.29523 23.6918 4.35559C23.6199 4.41594 23.5731 4.50394 23.5614 4.60066C23.5032 5.42003 24.7268 4.60066 26.6031 5.84213C26.5798 6.72447 26.6463 7.60691 26.8012 8.47404C27.0809 11.2549 26.9294 13.1792 26.8012 20.5659C25.4164 20.2449 23.998 20.1196 22.5825 20.1935C19.9432 20.1739 17.3655 21.0429 15.2173 22.6764C16.0097 19.3989 17.9443 18.5175 20.6713 17.4747C20.9802 17.3715 21.3034 17.3253 21.6269 17.3381C21.6901 17.4904 21.8016 17.6141 21.942 17.6875C22.0823 17.7608 22.2425 17.779 22.3942 17.739C22.546 17.699 22.6796 17.6032 22.7716 17.4686C22.8636 17.3339 22.908 17.169 22.8972 17.0029C22.4543 4.45169 22.8972 2.68881 22.7107 1.52183C22.5242 0.354851 21.7318 0.21829 20.6247 0.0444846C19.2647 -0.107436 17.8914 0.131383 16.6474 0.736125C15.4035 1.34087 14.3342 2.28946 13.5508 3.48334C13.4576 3.69439 12.9098 4.98552 12.8632 5.12208C12.0679 4.47483 11.1489 4.02138 10.1712 3.79371C7.66086 3.20037 5.03271 3.64407 2.81761 5.03518C2.3859 5.33392 2.0163 5.72383 1.73166 6.1808C1.44702 6.63776 1.2534 7.15206 1.16277 7.69191C0.137229 12.1115 -0.480424 13.4151 0.47519 22.813C0.47519 23.1978 0.47519 23.7937 0.824805 24.1537C0.903163 24.2234 0.994888 24.274 1.09354 24.3018C1.19219 24.3297 1.29537 24.3343 1.39584 24.3151V25.2711C1.54734 27.5057 4.33261 26.1401 7.39756 25.867C9.9381 25.6559 10.2178 26.2394 12.467 27.6298C13.3928 28.0007 14.3962 28.0952 15.3688 27.903C16.1659 27.7755 16.9218 27.4431 17.5714 26.9346C25.2512 20.9135 24.9832 27.9526 26.7779 22.8999C26.861 22.669 26.912 22.4264 26.9294 22.1798C27.0198 22.2431 27.1242 22.28 27.2322 22.2867C27.3402 22.2935 27.448 22.27 27.5448 22.2184C27.6415 22.1669 27.7239 22.0892 27.7836 21.9931C27.8433 21.897 27.8783 21.7858 27.885 21.6708C27.9921 20.1922 28.0193 18.7083 27.9666 17.2264ZM13.8421 5.78005C17.3383 -1.22181 21.6735 1.85702 21.86 2.05566C21.9532 2.4281 21.4288 10.8452 21.4055 11.6149L21.5104 15.898C20.2176 16.0457 18.9681 16.4799 17.8421 17.1726C16.7162 17.8654 15.7388 18.8013 14.9726 19.9203C14.3899 20.988 14.588 21.0997 14.4831 20.3921C14.4598 20.268 13.7955 5.87937 13.8421 5.78005ZM1.256 11.168C1.59396 9.78999 2.0135 6.28906 3.13226 5.89179C6.39534 4.72481 9.65841 4.43927 12.6884 6.20215C13.048 7.2679 13.2102 8.39777 13.1662 9.52928C13.1662 12.0743 13.2361 19.759 13.5158 22.0681C11.6607 21.1669 9.63303 20.7417 7.59568 20.8266C5.98414 20.9792 4.40824 21.4198 2.93415 22.1302C2.7943 22.1302 2.14169 22.8378 1.67553 23.1109C1.67553 22.9371 1.54734 22.7385 1.53569 22.6392C1.16277 19.2624 0.615036 14.8179 1.256 11.168ZM25.2163 23.3716C21.86 21.9439 19.1912 23.9675 16.8139 25.7801C16.3058 26.1422 15.7335 26.3897 15.1322 26.5071C14.5308 26.6245 13.9133 26.6095 13.3177 26.4629C8.80768 23.0613 7.0596 24.6876 2.98076 25.3456C2.77099 25.3456 2.60784 25.4573 2.50296 25.3456C2.39807 25.2338 2.28153 24.5138 2.0135 24.1041C2.51461 23.831 3.17888 23.3965 3.34203 23.3468C5.05514 22.7757 6.98968 21.4349 11.1851 22.6764C14.285 23.533 14.1218 24.9731 15.1707 24.3648C16.7323 23.4709 18.9815 20.7894 26.0204 21.6956C25.9498 21.7861 25.9125 21.9008 25.9155 22.0184C25.2279 23.3344 25.2629 23.2475 25.2163 23.3716Z" fill="#9E4423"/> <path d="M4.25132 10.2609C5.4167 10.0871 5.32347 9.47876 6.86178 9.47876C7.71937 9.54506 8.5654 9.72865 9.379 10.025C9.60043 9.93811 9.76358 9.83879 9.76358 9.60291C9.76358 9.06908 9.06435 8.52284 8.00385 8.36145C4.9389 7.75313 4.64755 9.31737 4.06486 9.60291C4.01162 9.64962 3.97254 9.71205 3.95254 9.78236C3.93253 9.85267 3.93249 9.92771 3.95242 9.99804C3.97235 10.0684 4.01136 10.1309 4.06455 10.1776C4.11773 10.2244 4.18272 10.2534 4.25132 10.2609Z" fill="#9E4423"/> <path d="M4.25254 14.644C5.41792 14.4702 5.32469 13.8619 6.86299 13.8619C7.72059 13.9282 8.56661 14.1118 9.38022 14.4081C9.60164 14.3337 9.7648 14.2219 9.7648 13.986C9.7648 13.4522 9.06557 12.9184 8.00507 12.7446C4.94011 12.1363 4.64877 13.6881 4.06607 13.986C4.00879 13.9798 3.95094 13.9887 3.89766 14.0119C3.84438 14.0352 3.79732 14.0721 3.76066 14.1194C3.724 14.1667 3.69888 14.223 3.68753 14.2831C3.67617 14.3432 3.67894 14.4054 3.69558 14.4642C3.71223 14.5229 3.74223 14.5763 3.78292 14.6197C3.82362 14.6631 3.87375 14.6952 3.92885 14.7129C3.98396 14.7307 4.04234 14.7338 4.09881 14.7217C4.15528 14.7097 4.20808 14.683 4.25254 14.644Z" fill="#9E4423"/> <path d="M4.24975 19.0761C5.41514 18.9023 5.32191 18.294 6.86021 18.294C7.7169 18.3672 8.56212 18.5506 9.37744 18.8402C9.59886 18.7657 9.76201 18.654 9.76201 18.4305C9.76201 17.8843 9.06278 17.3505 8.00229 17.1891C4.93733 16.5808 4.64598 18.145 4.06329 18.4305C4.00509 18.422 3.9458 18.4292 3.89091 18.4516C3.83603 18.4739 3.7873 18.5106 3.74925 18.5583C3.7112 18.606 3.68504 18.6631 3.6732 18.7244C3.66135 18.7857 3.6642 18.8492 3.68148 18.909C3.69875 18.9689 3.72991 19.0231 3.77205 19.0667C3.8142 19.1103 3.86599 19.1419 3.92262 19.1585C3.97926 19.1752 4.03892 19.1764 4.0961 19.162C4.15327 19.1475 4.20612 19.118 4.24975 19.0761Z" fill="#9E4423"/> </svg></span>Thinking &amp; Learning</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Curiosity and intrinsic love of learning</li><li>Independent thinking</li><li>Flexible and original problem solving</li><li>Capacity to synthesize across disciplines</li><li>Capacity to think in systems</li><li>Comfort with not knowing — and continuing to inquire anyway</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2338 20.09C20.9643 19.9096 20.6601 19.7874 20.3407 19.7311C20.0213 19.6749 19.6937 19.6859 19.3788 19.7633C18.62 19.9407 17.895 20.2402 17.2321 20.65C16.0375 21.3449 14.724 21.8117 13.3588 22.0266H12.9155H13.0205L13.6855 21.56C13.8507 21.4388 13.9884 21.284 14.0893 21.1056C14.1903 20.9273 14.2522 20.7296 14.2709 20.5255C14.2897 20.3214 14.2648 20.1157 14.1981 19.922C14.1314 19.7282 14.0242 19.5509 13.8838 19.4016C13.228 18.7821 12.4248 18.3404 11.5505 18.1183L9.69546 17.7683C8.92318 17.6547 8.14101 17.6234 7.36212 17.675C6.83848 17.7383 6.32496 17.8677 5.83379 18.06C5.57723 18.1649 5.33114 18.2938 5.09879 18.445C4.37201 19.0452 3.59085 19.5764 2.76546 20.0316C2.54402 20.1082 2.31143 20.1477 2.07712 20.1483C1.64546 20.1483 1.20212 20.1483 0.828789 20.09C0.781254 20.0851 0.733234 20.0898 0.687502 20.1036C0.641771 20.1175 0.599235 20.1402 0.562353 20.1706C0.52547 20.201 0.494972 20.2384 0.472619 20.2806C0.450266 20.3228 0.436502 20.3691 0.432123 20.4166C0.427318 20.4636 0.432043 20.511 0.446014 20.556C0.459984 20.601 0.482913 20.6428 0.513423 20.6787C0.543933 20.7147 0.581395 20.7441 0.623559 20.7652C0.665724 20.7864 0.711721 20.7987 0.758789 20.8016C1.14379 20.86 1.61046 20.9416 2.05379 20.965C2.38659 20.9932 2.72176 20.9656 3.04546 20.8833C3.30551 20.8014 3.55901 20.7 3.80379 20.58C4.57694 20.0575 5.39258 19.6009 6.24212 19.215C6.7616 19.0674 7.30066 19.0005 7.84046 19.0166C8.41425 19.0233 8.98706 19.0661 9.55545 19.145L11.2588 19.4483C11.8043 19.5629 12.3255 19.7722 12.7988 20.0666C12.9388 20.16 13.0788 20.2416 13.1021 20.3933C13.0922 20.5477 13.0257 20.6931 12.9155 20.8016L12.5888 21.07C12.1898 21.2717 11.7601 21.4058 11.3171 21.4666C10.5764 21.534 9.8325 21.5613 9.08879 21.5483C8.97939 21.5483 8.87429 21.5909 8.79585 21.6672C8.71742 21.7434 8.67183 21.8473 8.66879 21.9566C8.66879 22.0649 8.71181 22.1688 8.78839 22.2454C8.86496 22.322 8.96883 22.365 9.07712 22.365H9.10046C10.4883 22.933 12.0011 23.1262 13.4871 22.925C14.9807 22.7549 16.4313 22.3162 17.7688 21.63C18.3374 21.3229 18.952 21.1101 19.5888 21C19.889 20.9332 20.2035 20.9877 20.4638 21.1516C20.5214 21.2081 20.561 21.2803 20.5776 21.3592C20.5942 21.4381 20.5871 21.5201 20.5571 21.595C20.51 21.8828 20.3939 22.155 20.2188 22.3883C19.8538 22.897 19.4039 23.3391 18.8888 23.695C18.0494 24.2765 17.1681 24.7951 16.2521 25.2466C15.3815 25.7135 14.472 26.1039 13.5338 26.4133C12.9338 26.6086 12.3094 26.7186 11.6788 26.74C11.1691 26.7479 10.6602 26.697 10.1621 26.5883C8.90212 26.3433 7.67712 25.8766 6.42879 25.6083C5.46148 25.4313 4.48299 25.3222 3.50046 25.2816C2.51765 25.2164 1.5316 25.2164 0.54879 25.2816C0.495137 25.2846 0.4426 25.2982 0.39419 25.3215C0.34578 25.3448 0.302449 25.3775 0.266682 25.4176C0.230915 25.4577 0.203415 25.5044 0.185758 25.5552C0.168102 25.6059 0.160636 25.6597 0.16379 25.7133C0.172744 25.8227 0.224147 25.9242 0.307001 25.9962C0.389854 26.0681 0.497578 26.1048 0.607123 26.0983C1.54926 26.0639 2.49265 26.095 3.43046 26.1916C4.36884 26.264 5.30073 26.4044 6.21879 26.6116C7.46712 26.9266 8.68046 27.4516 9.92879 27.7783C10.4997 27.9085 11.0818 27.9828 11.6671 28C12.4214 28.0066 13.1725 27.9004 13.8955 27.685C14.9262 27.3688 15.9227 26.9506 16.8705 26.4366C17.8538 25.9598 18.7979 25.4059 19.6938 24.78C20.3259 24.3262 20.8779 23.7703 21.3271 23.135C21.6795 22.6314 21.8744 22.0345 21.8871 21.42C21.8927 21.1622 21.8363 20.9068 21.7226 20.6753C21.6089 20.4439 21.4412 20.2431 21.2338 20.09Z" fill="#2B4236"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M27.7789 5.39021C27.708 4.8828 27.5909 4.38294 27.4289 3.89687C27.3038 3.52284 27.1396 3.16307 26.9389 2.82354C26.7283 2.48678 26.4819 2.17384 26.2039 1.89021C25.9795 1.65814 25.7377 1.44362 25.4806 1.24854C25.2301 1.04978 24.9649 0.870373 24.6872 0.711875C24.0031 0.304227 23.2326 0.0633008 22.4381 0.00857838C21.6437 -0.046144 20.8474 0.0868736 20.1139 0.396875C18.3756 1.21051 16.844 2.40708 15.6339 3.89687C15.1075 3.19486 14.5092 2.5497 13.8489 1.97187C13.2222 1.43424 12.508 1.00807 11.7372 0.711875C10.8345 0.360392 9.86099 0.228916 8.89733 0.328324C7.93368 0.427733 7.00755 0.755168 6.19555 1.28354C5.41888 1.82123 4.76119 2.51304 4.26342 3.31588C3.76565 4.11873 3.43846 5.01545 3.30222 5.95021C3.09113 7.60965 3.41394 9.29321 4.22389 10.7569C5.40058 12.8453 6.94613 14.7031 8.78555 16.2402C8.81817 16.2737 8.85717 16.3004 8.90025 16.3185C8.94333 16.3367 8.98962 16.3461 9.03639 16.3461C9.08315 16.3461 9.12944 16.3367 9.17252 16.3185C9.21561 16.3004 9.25461 16.2737 9.28722 16.2402C9.32226 16.2085 9.35027 16.1698 9.36943 16.1266C9.3886 16.0834 9.3985 16.0366 9.3985 15.9894C9.3985 15.9421 9.3886 15.8954 9.36943 15.8522C9.35027 15.809 9.32226 15.7703 9.28722 15.7385C7.55803 14.2203 6.12252 12.3973 5.05222 10.3602C4.37514 9.06288 4.1299 7.58327 4.35222 6.13687C4.49516 5.36612 4.79199 4.63209 5.22496 3.97862C5.65794 3.32515 6.21818 2.76565 6.87222 2.33354C7.52545 1.93102 8.26536 1.69032 9.03039 1.63147C9.79542 1.57262 10.5634 1.69732 11.2706 1.99521C11.8909 2.23959 12.4635 2.59105 12.9622 3.03354C13.7433 3.74376 14.4437 4.53801 15.0506 5.40187C15.1149 5.48431 15.1972 5.55098 15.2912 5.59684C15.3852 5.6427 15.4885 5.66654 15.5931 5.66654C15.6976 5.66654 15.8009 5.6427 15.8949 5.59684C15.9889 5.55098 16.0712 5.48431 16.1356 5.40187C17.3101 3.80934 18.8454 2.51792 20.6156 1.63354C21.162 1.38978 21.7581 1.27757 22.3558 1.30594C22.9535 1.3343 23.5363 1.50245 24.0572 1.79687L24.7339 2.22854C24.9426 2.38303 25.1413 2.55059 25.3289 2.73021C25.5494 2.96317 25.7414 3.22168 25.9006 3.50021C26.0666 3.75641 26.2036 4.03032 26.3089 4.31687C26.4574 4.72959 26.5667 5.15535 26.6356 5.58854C26.7053 6.03237 26.7404 6.48094 26.7406 6.93021C26.7125 8.51465 26.2483 10.0607 25.3989 11.3985C24.0364 13.4616 22.3953 15.3265 20.5222 16.9402C20.4467 17.0185 20.4044 17.1231 20.4044 17.2319C20.4044 17.3407 20.4467 17.4452 20.5222 17.5235C20.5985 17.5984 20.7012 17.6403 20.8081 17.6403C20.9149 17.6403 21.0176 17.5984 21.0939 17.5235C23.0673 15.8959 24.8065 14.0036 26.2622 11.9002C27.2556 10.4185 27.8171 8.68954 27.8839 6.90687C27.8785 6.3997 27.8434 5.89328 27.7789 5.39021Z" fill="#2B4236"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1462 14.1288C11.918 14.3878 11.7112 14.6648 11.5278 14.9572C11.4843 15.0347 11.4708 15.1255 11.49 15.2124C11.5091 15.2992 11.5596 15.3759 11.6318 15.4279C11.704 15.4798 11.7927 15.5034 11.8812 15.494C11.9696 15.4847 12.0515 15.4431 12.1112 15.3772C12.3075 15.1536 12.5221 14.9468 12.7528 14.7588C12.9837 14.5854 13.2297 14.4331 13.4878 14.3038C13.6978 14.1988 13.9428 14.0938 14.1878 14.0005C14.3947 13.9262 14.6104 13.8791 14.8295 13.8605C15.3351 13.7848 15.8515 13.8329 16.3345 14.0005C16.653 14.1008 16.9555 14.2462 17.2328 14.4322C17.9715 14.9809 18.512 15.7547 18.7728 16.6372C18.7859 16.6893 18.809 16.7383 18.841 16.7814C18.8729 16.8246 18.9131 16.861 18.9591 16.8886C19.0052 16.9162 19.0562 16.9345 19.1093 16.9424C19.1624 16.9503 19.2166 16.9477 19.2687 16.9347C19.3208 16.9217 19.3698 16.8985 19.4129 16.8665C19.4561 16.8346 19.4925 16.7944 19.5201 16.7484C19.5477 16.7023 19.566 16.6513 19.5739 16.5982C19.5818 16.5451 19.5792 16.4909 19.5662 16.4388C19.4003 15.3002 18.8533 14.2515 18.0145 13.4638C17.746 13.2168 17.4385 13.0157 17.1045 12.8688C17.583 12.6131 17.978 12.2254 18.2427 11.7519C18.5074 11.2783 18.6306 10.7387 18.5978 10.1972C18.6186 10.1287 18.6186 10.0556 18.5978 9.98718C18.6398 9.94049 18.6685 9.88335 18.6808 9.82177C18.6931 9.76019 18.6886 9.69643 18.6678 9.63718C18.6146 9.23612 18.5087 8.84385 18.3528 8.47051C18.2385 8.19196 18.0766 7.93537 17.8745 7.71218C17.5739 7.39791 17.2112 7.14956 16.8096 6.98286C16.4079 6.81617 15.976 6.73477 15.5412 6.74385C15.0781 6.74042 14.6196 6.83657 14.1969 7.02578C13.7742 7.21499 13.3971 7.49284 13.0912 7.84051C12.8376 8.14703 12.6544 8.50546 12.5545 8.89051C12.3732 9.40683 12.2978 9.9544 12.3328 10.5005C12.377 10.9777 12.5331 11.4377 12.7885 11.8431C13.044 12.2486 13.3915 12.588 13.8028 12.8338C13.4953 12.9945 13.2025 13.1819 12.9278 13.3938C12.6423 13.6109 12.3803 13.8572 12.1462 14.1288ZM13.7328 9.46218C13.7805 9.18363 13.8923 8.92001 14.0595 8.69218C14.2323 8.46766 14.4504 8.28202 14.6996 8.14734C14.9489 8.01267 15.2237 7.93198 15.5062 7.91051C15.8051 7.86549 16.1102 7.88377 16.4016 7.96416C16.693 8.04455 16.9643 8.18526 17.1978 8.37718C17.3885 8.55149 17.5431 8.76158 17.6528 8.99551C17.7701 9.25778 17.86 9.53145 17.9212 9.81218C17.9161 9.83524 17.9161 9.85912 17.9212 9.88218C17.8669 9.91751 17.8224 9.96597 17.7918 10.0231C17.7612 10.0802 17.7455 10.1441 17.7462 10.2088C17.7219 10.7453 17.4885 11.2508 17.096 11.6172C16.7034 11.9836 16.183 12.1816 15.6462 12.1688C15.4003 12.1862 15.1534 12.1541 14.9201 12.0744C14.6868 11.9946 14.4719 11.8689 14.288 11.7047C14.1042 11.5404 13.9552 11.341 13.8498 11.1181C13.7444 10.8952 13.6848 10.6535 13.6745 10.4072C13.6491 10.0755 13.6687 9.74192 13.7328 9.41551V9.46218Z" fill="#2B4236"/> </g> </svg></span>Self-Regulation &amp; Inner Life</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Self-regulation and impulse control</li><li>Capacity for stillness and sustained attention</li><li>Resilience and frustration tolerance</li><li>Patience, perseverance, and follow-through</li><li>Ability to act from inner conviction rather than external pressure</li><li>Capacity to sit with uncertainty without needing immediate resolution</li><li>Capacity for reflection and introspection</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M27.9996 11.1999C27.8946 8.8666 26.1213 5.5766 23.1113 3.17327C20.596 1.14165 17.4662 0.0229621 14.233 -6.4468e-05C10.7818 -0.0688447 7.42045 1.10266 4.75963 3.3016C2.10077 5.53022 0.424657 8.71482 0.0929686 12.1683C-0.117031 15.7383 0.442969 17.8266 1.6913 19.2616C2.93963 20.6966 5.1213 21.5949 8.08463 22.5866C8.18963 22.5866 8.22463 22.7616 8.28297 22.9366C8.41578 23.5321 8.41578 24.1495 8.28297 24.7449C8.14878 25.631 7.787 26.4672 7.23297 27.1716C7.17531 27.2474 7.14041 27.338 7.13235 27.4329C7.12429 27.5278 7.1434 27.623 7.18744 27.7074C7.23149 27.7918 7.29866 27.862 7.38109 27.9097C7.46353 27.9573 7.55783 27.9805 7.65297 27.9766C7.9962 27.9844 8.3395 27.9649 8.67963 27.9183C10.1452 27.7707 11.5618 27.3091 12.833 26.5649C13.2676 26.2469 13.6597 25.8744 13.9996 25.4566C14.8046 24.4766 15.493 23.2399 15.8896 22.7266C16.368 22.7266 17.523 22.7266 18.7363 22.5749C19.4277 22.5039 20.1137 22.387 20.7896 22.2249C23.1306 21.5943 25.1523 20.1134 26.4596 18.0716C27.6685 15.9944 28.2064 13.5944 27.9996 11.1999ZM25.6663 17.5933C24.5194 19.4744 22.7083 20.8566 20.5913 21.4666C19.9551 21.6328 19.3079 21.7536 18.6546 21.8283C17.1146 22.0149 15.8546 21.7466 15.4696 22.0266C15.0846 22.3066 14.3963 23.5783 13.6496 24.5466C13.2926 25.0426 12.8641 25.4829 12.378 25.8533C11.2153 26.5163 9.92061 26.9146 8.5863 27.0199C9.02777 26.1697 9.28235 25.2349 9.33297 24.2783C9.40261 23.652 9.33085 23.0181 9.12297 22.4233C9.06584 22.2408 8.96936 22.0731 8.84035 21.932C8.71134 21.7909 8.55293 21.6798 8.3763 21.6066C5.65797 20.6149 3.70963 19.9033 2.54297 18.5033C1.3763 17.1033 1.08464 15.3766 1.3763 12.2499C1.72094 9.14555 3.27113 6.30074 5.69297 4.32827C8.12535 2.34012 11.1853 1.28153 14.3263 1.3416C17.263 1.33942 20.115 2.3257 22.423 4.1416C25.1646 6.26494 26.868 9.15827 27.008 11.2583C27.2055 13.4652 26.7122 15.679 25.5963 17.5933H25.6663Z" fill="#5A7A61"/> <path d="M8.97095 8.16621C9.36174 8.13615 9.75483 8.16366 10.1376 8.24787C10.5684 8.31089 10.9762 8.48195 11.323 8.74512C11.6698 9.00828 11.9443 9.35497 12.121 9.75287C12.1507 9.85319 12.2189 9.93767 12.3107 9.98793C12.4025 10.0382 12.5104 10.0502 12.611 10.0212C12.7036 9.98002 12.7776 9.90585 12.8185 9.81313C12.8595 9.72041 12.8645 9.61576 12.8326 9.51954C12.6925 8.92181 12.3944 8.37265 11.9696 7.92939C11.5448 7.48613 11.0089 7.165 10.4176 6.99954C9.43587 6.67597 8.3698 6.7216 7.41929 7.12787C6.8613 7.35566 6.36813 7.71759 5.98349 8.18159C5.59886 8.64559 5.33465 9.19732 5.21429 9.78787C5.19991 9.83229 5.19455 9.87913 5.19855 9.92564C5.20254 9.97215 5.2158 10.0174 5.23754 10.0587C5.25929 10.1 5.28907 10.1366 5.32515 10.1662C5.36123 10.1958 5.40287 10.2179 5.44762 10.2312C5.52899 10.2438 5.6122 10.2273 5.68261 10.1847C5.75303 10.142 5.80614 10.0758 5.83262 9.99787C6.01661 9.59108 6.29082 9.23154 6.63447 8.94652C6.97811 8.66149 7.38216 8.45848 7.81595 8.35287C8.19256 8.24674 8.58009 8.18411 8.97095 8.16621Z" fill="#5A7A61"/> <path d="M20.6263 6.88342C20.1507 6.69857 19.6429 6.61128 19.1329 6.62675C18.62 6.62829 18.1125 6.73138 17.6396 6.93008C17.1078 7.16446 16.6319 7.50935 16.2437 7.94183C15.8555 8.37431 15.5637 8.88448 15.3879 9.43842C15.3554 9.52548 15.3564 9.62156 15.391 9.70787C15.4255 9.79417 15.491 9.8645 15.5746 9.90508C15.6597 9.94005 15.7552 9.94007 15.8404 9.90513C15.9256 9.87019 15.9935 9.80311 16.0296 9.71842C16.4829 8.9509 17.2208 8.39329 18.0829 8.16675C18.4329 8.0679 18.793 8.00919 19.1563 7.99175C19.7696 7.92983 20.3872 8.05774 20.9256 8.3582C21.4639 8.65866 21.897 9.11717 22.1663 9.67175C22.2054 9.76919 22.2806 9.8478 22.3762 9.89125C22.4718 9.9347 22.5804 9.93965 22.6796 9.90508C22.7288 9.88693 22.7739 9.8592 22.8123 9.8235C22.8507 9.78779 22.8817 9.74483 22.9033 9.6971C22.925 9.64936 22.9371 9.59779 22.9387 9.54538C22.9404 9.49297 22.9316 9.44075 22.9129 9.39175C22.7554 8.82353 22.4663 8.30037 22.069 7.86461C21.6718 7.42884 21.1775 7.09272 20.6263 6.88342Z" fill="#5A7A61"/> <path d="M20.3471 13.8251C20.2974 13.8087 20.2448 13.8024 20.1926 13.8065C20.1404 13.8106 20.0895 13.825 20.0428 13.8488C19.9962 13.8727 19.9547 13.9055 19.9208 13.9455C19.887 13.9855 19.8614 14.0318 19.8455 14.0817C19.5537 14.6768 19.1222 15.1924 18.5879 15.5845C18.0536 15.9766 17.4323 16.2335 16.7771 16.3334C15.8745 16.5402 14.9496 16.6342 14.0238 16.6134C13.3307 16.603 12.6398 16.5328 11.9588 16.4034C10.1971 16.0534 8.68047 15.3184 8.28381 13.93C8.26169 13.8406 8.20518 13.7635 8.12655 13.7154C8.04792 13.6674 7.95351 13.6523 7.86381 13.6734C7.81892 13.6817 7.77617 13.699 7.73813 13.7242C7.7001 13.7495 7.66757 13.7821 7.6425 13.8203C7.61743 13.8584 7.60034 13.9013 7.59226 13.9462C7.58418 13.9911 7.58527 14.0372 7.59547 14.0817C7.88714 15.82 9.55547 17.0801 11.6788 17.6401C12.4406 17.841 13.2243 17.9468 14.0121 17.9551C14.7972 17.9588 15.58 17.8727 16.3455 17.6984C18.4338 17.1967 20.1488 16.0417 20.6038 14.3151C20.6333 14.216 20.6229 14.1094 20.575 14.0179C20.527 13.9264 20.4453 13.8572 20.3471 13.8251Z" fill="#5A7A61"/> </g> </svg></span>Emotional &amp; Social</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Emotional intelligence and social attunement</li><li>Empathy and compassion</li><li>Capacity to hold complexity in human relationships</li><li>Ability to repair relationships after conflict</li><li>Comfort with vulnerability and emotional honesty</li><li>Listening skills</li><li>Ability to collaborate and work in community</li><li>Leadership balanced with cooperation</li><li>Sense of responsibility toward others</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6662 2.96319C11.4625 1.80369 10.8082 0.771921 9.84624 0.0931902C9.6025 -0.00241756 9.33164 -0.00241756 9.0879 0.0931902C8.77239 0.186728 8.46431 0.30372 8.16624 0.44319C7.36124 0.816524 6.52124 1.14319 5.71624 1.51652C5.35457 1.67986 4.9929 1.86652 4.6429 2.05319C4.29151 2.23044 3.95585 2.4373 3.63957 2.67152C3.46488 2.82409 3.3357 3.02191 3.26624 3.24319C3.20313 3.53538 3.20313 3.83767 3.26624 4.12986C3.37124 4.56152 3.5929 5.05152 3.6629 5.29652C3.9079 6.46319 4.3629 8.11986 4.7129 9.63652C3.42957 9.18152 1.99457 10.3832 1.85457 10.5115C1.54733 10.7854 1.31112 11.1296 1.16624 11.5149C1.00758 11.916 0.978519 12.3567 1.08314 12.7752C1.18776 13.1937 1.42081 13.5689 1.74957 13.8482C2.06671 14.1183 2.44535 14.3064 2.85221 14.3959C3.25906 14.4854 3.68168 14.4736 4.0829 14.3615C4.63544 14.1904 5.12307 13.8557 5.48135 13.4016C5.83963 12.9475 6.05171 12.3954 6.08957 11.8182C6.09203 11.4137 6.00015 11.0143 5.82124 10.6515C5.82124 10.3365 5.73957 10.0215 5.6929 9.69486C5.45957 8.10819 5.14457 6.31152 4.9929 5.12152C4.5379 3.02152 4.45624 3.82652 5.3429 3.37152L8.7729 1.76152C8.7729 1.76152 9.60124 0.466524 10.4996 3.27819C10.7338 4.03756 10.8864 4.81977 10.9546 5.61152C9.72957 5.03986 8.27124 6.06652 7.87457 6.43986C7.58749 6.69841 7.36733 7.02265 7.2329 7.38486C7.06561 7.78371 7.03086 8.22575 7.13378 8.64584C7.2367 9.06593 7.47185 9.44185 7.80457 9.71819C8.12116 9.98942 8.4993 10.1791 8.90601 10.2706C9.31273 10.3621 9.73566 10.3527 10.1379 10.2432C10.6913 10.0735 11.1798 9.73922 11.5383 9.28482C11.8968 8.83042 12.1083 8.27752 12.1446 7.69986C12.1512 7.40212 12.1038 7.10565 12.0046 6.82486C12.0714 5.52817 11.9575 4.2285 11.6662 2.96319ZM3.68624 12.8332C3.51925 12.8765 3.34474 12.8822 3.17528 12.8499C3.00582 12.8176 2.84563 12.7482 2.70624 12.6465C2.57407 12.5616 2.46879 12.4408 2.40268 12.2982C2.33658 12.1557 2.31238 11.9973 2.3329 11.8415C2.39214 11.5661 2.52523 11.312 2.7179 11.1065C4.12957 9.57819 4.9579 10.9082 4.84124 11.6549C4.79022 11.9449 4.65257 12.2127 4.44641 12.4231C4.24024 12.6334 3.97523 12.7764 3.68624 12.8332ZM9.69457 8.77319C9.52758 8.81646 9.35307 8.82217 9.18361 8.78989C9.01415 8.75761 8.85396 8.68816 8.71457 8.58652C8.57635 8.49902 8.46713 8.37255 8.40069 8.22306C8.33425 8.07357 8.31356 7.90776 8.34124 7.74652C8.39155 7.467 8.52113 7.20782 8.71457 6.99986C10.1262 5.45986 10.9546 6.81319 10.8496 7.54819C10.8011 7.84424 10.6652 8.11904 10.4594 8.33731C10.2536 8.55558 9.98726 8.70737 9.69457 8.77319Z" fill="#C25B30"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9081 7.1398C18.0247 6.67313 18.0831 6.2648 18.2581 5.57647L18.3514 5.12147L18.7597 5.41313C19.0747 5.69313 19.2964 5.89147 19.3314 6.1598C19.3213 6.50789 19.2076 6.84505 19.0047 7.12813C18.9431 7.22916 18.9232 7.35025 18.9493 7.4657C18.9755 7.58114 19.0456 7.68186 19.1447 7.74647C19.1934 7.77827 19.248 7.79991 19.3053 7.81009C19.3625 7.82026 19.4212 7.81877 19.4779 7.8057C19.5346 7.79262 19.588 7.76823 19.635 7.734C19.682 7.69976 19.7216 7.65638 19.7514 7.60647C20.1054 7.18023 20.3175 6.65407 20.3581 6.10147C20.2983 5.51536 20.0191 4.97354 19.5764 4.5848L18.6664 3.7098L18.3747 3.4998C18.2271 3.4043 18.0498 3.36583 17.8758 3.3916C17.7019 3.41737 17.5433 3.5056 17.4297 3.6398C17.3025 3.80925 17.204 3.99843 17.1381 4.1998C17.0097 4.52647 16.9281 4.9348 16.8464 5.19147L16.2631 7.4198H16.1814C16.0224 7.40341 15.8621 7.40341 15.7031 7.4198C15.5328 7.3966 15.3601 7.3966 15.1897 7.4198C14.9976 7.44911 14.8144 7.52092 14.6535 7.63C14.4926 7.73908 14.3581 7.88268 14.2597 8.05034C14.1614 8.218 14.1016 8.40549 14.0849 8.59915C14.0682 8.79281 14.0949 8.98776 14.1631 9.1698C14.2004 9.37591 14.2807 9.57187 14.3987 9.74493C14.5167 9.91799 14.6698 10.0643 14.8481 10.1743C15.0263 10.2843 15.2257 10.3556 15.4333 10.3836C15.6409 10.4115 15.8521 10.3955 16.0531 10.3365C16.3611 10.227 16.632 10.0329 16.8347 9.77647C17.161 9.32979 17.4132 8.83342 17.5814 8.30647C17.7129 7.92426 17.822 7.53471 17.9081 7.1398ZM15.8781 8.62147C15.7964 8.79647 15.7614 8.9948 15.5981 9.0648C15.4347 9.1348 15.1664 8.8898 15.1664 8.65647C15.1477 8.56853 15.1625 8.4768 15.2078 8.39915C15.2531 8.3215 15.3257 8.2635 15.4114 8.23647H16.0764C16.0167 8.36801 15.9505 8.4965 15.8781 8.62147Z" fill="#C25B30"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1045 20.6732C20.8245 20.6732 20.5562 20.6032 20.2879 20.5682C20.0242 20.5249 19.7632 20.4664 19.5062 20.3932C18.7945 20.2182 18.1762 20.0316 18.0129 19.6232C17.9994 19.5725 17.9759 19.525 17.9439 19.4834C17.9119 19.4418 17.8719 19.4069 17.8264 19.3809C17.7808 19.3548 17.7305 19.3381 17.6784 19.3316C17.6263 19.3252 17.5734 19.3291 17.5229 19.3432C17.4726 19.3554 17.4253 19.3776 17.3838 19.4085C17.3423 19.4393 17.3074 19.4783 17.2813 19.5229C17.2551 19.5676 17.2383 19.617 17.2317 19.6683C17.2251 19.7196 17.2289 19.7718 17.2429 19.8216C17.363 20.2613 17.5883 20.6652 17.8992 20.9985C18.2102 21.3319 18.5975 21.5846 19.0279 21.7349C19.3482 21.8909 19.6905 21.9972 20.0429 22.0499C20.3991 22.0969 20.76 22.0969 21.1162 22.0499C21.5409 22.002 21.957 21.896 22.3529 21.7349C22.8662 21.3032 22.7845 20.8599 22.3529 20.6849C21.8045 20.8599 21.6412 20.7082 21.1045 20.6732Z" fill="#C25B30"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6664 13.4864L24.6748 11.5264C24.2081 10.6514 24.3598 10.0214 23.9631 9.33303C23.4919 8.60056 22.8251 8.01457 22.0381 7.64137C21.9522 7.60273 21.8554 7.59591 21.7649 7.62212C21.6745 7.64834 21.5963 7.70588 21.5444 7.78445C21.4925 7.86302 21.4702 7.9575 21.4816 8.05098C21.493 8.14446 21.5372 8.23085 21.6064 8.2947C22.181 8.67978 22.6471 9.20605 22.9598 9.82303C23.0494 10.1337 23.0888 10.4566 23.0764 10.7797C23.0941 11.2335 23.1806 11.6819 23.3331 12.1097C23.5431 12.5997 23.7414 13.0547 23.9164 13.4397C24.0743 13.7587 24.2536 14.0666 24.4531 14.3614C24.692 14.6608 24.9492 14.9452 25.2231 15.213C25.4098 15.4114 25.6198 15.5397 25.6548 15.738C25.6898 15.9364 25.5498 16.123 25.2464 16.4264L24.6981 16.8347C24.5739 16.9042 24.4403 16.9553 24.3014 16.9864C24.1344 16.9978 23.9668 16.9978 23.7998 16.9864C23.7376 16.9866 23.6762 17.0003 23.6199 17.0265C23.5635 17.0527 23.5134 17.0907 23.4731 17.138C23.3764 17.1793 23.2975 17.2535 23.2505 17.3476C23.2035 17.4416 23.1914 17.5493 23.2164 17.6514C23.4311 19.4716 22.9884 21.3087 21.9681 22.8314C21.5285 23.472 20.8882 23.9481 20.1481 24.1847C19.3439 24.4486 18.4906 24.5284 17.6514 24.418C17.5509 24.3948 17.4452 24.4125 17.3577 24.4672C17.2702 24.5219 17.208 24.6091 17.1848 24.7097C17.1616 24.8103 17.1793 24.9159 17.234 25.0034C17.2887 25.091 17.3759 25.1532 17.4764 25.1764C17.7827 25.2582 18.0947 25.3167 18.4098 25.3514C18.3218 25.6149 18.2746 25.8903 18.2698 26.168C18.303 26.3818 18.3659 26.5899 18.4564 26.7864C18.6033 27.0644 18.767 27.3332 18.9464 27.5914C18.9574 27.6487 18.98 27.7032 19.0126 27.7516C19.0453 27.8 19.0875 27.8413 19.1365 27.8729C19.1856 27.9045 19.2406 27.9259 19.2982 27.9356C19.3557 27.9454 19.4147 27.9434 19.4714 27.9297C19.5866 27.9019 19.6864 27.8303 19.7496 27.7301C19.8127 27.6298 19.8343 27.5089 19.8098 27.393C19.8276 27.0783 19.8276 26.7628 19.8098 26.448V26.0747C19.7779 25.9596 19.739 25.8466 19.6931 25.7364C19.6399 25.6324 19.5815 25.5312 19.5181 25.433C19.838 25.4369 20.1577 25.4174 20.4748 25.3747C21.5344 25.1558 22.4886 24.5842 23.1814 23.753C23.8078 22.8198 24.2073 21.7531 24.3481 20.638C24.4698 19.7116 24.4223 18.7708 24.2081 17.8614C24.344 17.8733 24.4806 17.8733 24.6164 17.8614C24.8003 17.8362 24.9804 17.7892 25.1531 17.7214L26.0281 17.2197C26.3276 17.0498 26.575 16.8014 26.7436 16.5012C26.9122 16.201 26.9956 15.8605 26.9848 15.5164C26.8331 14.9214 26.2031 14.3147 25.6664 13.4864Z" fill="#C25B30"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.91267 21.5364C8.58973 21.0375 8.29752 20.5193 8.03767 19.9848C7.77053 19.4682 7.55933 18.9245 7.40767 18.3631C7.30481 17.9808 7.23456 17.5906 7.19767 17.1964C7.16289 16.5358 7.16289 15.8737 7.19767 15.2131C7.20695 15.111 7.17529 15.0094 7.10965 14.9306C7.04402 14.8518 6.94978 14.8024 6.84767 14.7931C6.79711 14.7885 6.74614 14.7939 6.69767 14.809C6.6492 14.8241 6.60418 14.8486 6.56518 14.8811C6.48642 14.9467 6.43695 15.041 6.42767 15.1431C6.28506 15.8212 6.1799 16.5067 6.11267 17.1964C6.07182 17.6856 6.07182 18.1773 6.11267 18.6664C6.22682 19.3588 6.43076 20.0334 6.71934 20.6731C7.01348 21.2946 7.3817 21.8783 7.816 22.4114C8.55579 23.3205 9.4337 24.1079 10.4177 24.7448C10.3836 24.8518 10.3563 24.9609 10.336 25.0714C10.2987 25.1924 10.2791 25.3182 10.2777 25.4448V26.8448C10.2452 26.9592 10.2595 27.0819 10.3175 27.1859C10.3755 27.2898 10.4723 27.3664 10.5868 27.3989C10.7013 27.4314 10.824 27.4171 10.9279 27.3591C11.0319 27.3011 11.1085 27.2042 11.141 27.0898C11.3402 26.7443 11.5156 26.3857 11.666 26.0164C11.7226 25.8618 11.7618 25.7014 11.7827 25.5381C11.806 25.3717 11.806 25.2028 11.7827 25.0364C11.386 22.9364 11.036 24.7214 8.91267 21.5364Z" fill="#C25B30"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M19.424 12.2267C19.3073 12.2267 19.179 12.2267 19.0623 12.1567C18.7159 12.0991 18.3925 11.9455 18.129 11.7134C18.0779 11.6236 17.9933 11.5579 17.8938 11.5305C17.7942 11.5032 17.6879 11.5165 17.5981 11.5675C17.5084 11.6186 17.4426 11.7032 17.4153 11.8027C17.4017 11.852 17.398 11.9035 17.4044 11.9542C17.4107 12.005 17.427 12.0539 17.4523 12.0984C17.6094 12.6606 17.9716 13.1434 18.4673 13.4517C18.693 13.5938 18.9486 13.6816 19.214 13.7084C19.3917 13.7375 19.5729 13.7375 19.7506 13.7084C20.0904 13.6461 20.4122 13.5091 20.6926 13.3074C20.9731 13.1056 21.2052 12.8441 21.3723 12.5417C21.4119 12.4975 21.442 12.4455 21.4606 12.3891C21.4792 12.3327 21.486 12.2731 21.4805 12.214C21.475 12.1548 21.4574 12.0975 21.4288 12.0455C21.4001 11.9935 21.361 11.9479 21.314 11.9117C21.2737 11.8704 21.2257 11.8376 21.1726 11.8152C21.1195 11.7928 21.0624 11.7813 21.0048 11.7813C20.9472 11.7813 20.8901 11.7928 20.837 11.8152C20.7839 11.8376 20.7358 11.8704 20.6956 11.9117C20.5234 12.0606 20.3185 12.1667 20.0975 12.2214C19.8765 12.2761 19.6458 12.2779 19.424 12.2267Z" fill="#C25B30"/> </svg></span>Creative &amp; Imaginative</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Imagination and creative thinking</li><li>Ability to think symbolically and metaphorically</li><li>Capacity to imagine what does not yet exist</li><li>Artistic expression through multiple modalities</li><li>Storytelling and verbal expression</li><li>Musicality and rhythmic awareness</li><li>Aesthetic sensitivity</li><li>Capacity for deep engagement</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path fill-rule="evenodd" clip-rule="evenodd" d="M22.9359 18.8415C22.4249 18.0095 21.6152 17.4043 20.6726 17.1498C19.5742 16.8866 18.4249 16.9269 17.3476 17.2665C17.0104 14.8546 16.3471 12.4998 15.3759 10.2665C14.6526 8.98314 13.7309 8.62147 12.8326 9.26314C12.4829 9.54874 12.2235 9.9297 12.0859 10.3598C11.8683 11.1198 11.7429 11.9032 11.7126 12.6931C11.7155 14.9028 11.8754 17.1095 12.1909 19.2965C11.7948 18.9765 11.369 18.6953 10.9193 18.4565C9.75261 17.8848 8.58595 17.8615 8.10761 18.6198C7.864 18.978 7.70758 19.3882 7.65086 19.8177C7.59414 20.2472 7.63869 20.684 7.78095 21.0931C8.45059 22.648 9.30448 24.1168 10.3243 25.4681C10.9279 26.2798 11.5744 27.0586 12.2609 27.8015C12.3332 27.8782 12.4229 27.9363 12.5224 27.9708C12.622 28.0053 12.7284 28.0153 12.8326 27.9998C12.8834 27.9856 12.9307 27.9609 12.9712 27.9271C13.0117 27.8934 13.0447 27.8514 13.0678 27.804C13.091 27.7566 13.1038 27.7049 13.1055 27.6521C13.1072 27.5994 13.0977 27.5469 13.0776 27.4981C12.3108 26.7616 11.6262 25.9441 11.0359 25.0598C10.2687 23.8967 9.57136 22.6891 8.94761 21.4431C8.75162 21.1109 8.64824 20.7322 8.64824 20.3465C8.64824 19.9607 8.75162 19.582 8.94761 19.2498C9.06428 19.0981 9.26261 19.1098 9.46095 19.1448C9.9451 19.2589 10.4014 19.4692 10.8026 19.7631C11.5959 20.2998 12.3543 21.0115 12.4476 21.4548C12.5409 21.8981 13.8009 22.3998 13.6843 21.1865C13.6843 21.0581 13.6843 20.7781 13.6026 20.4048C13.2738 17.8945 13.114 15.3649 13.1243 12.8331C13.145 12.3438 13.1995 11.8566 13.2876 11.3748C13.3084 11.0281 13.4392 10.6971 13.6609 10.4298C13.6793 10.4156 13.7019 10.4079 13.7251 10.4079C13.7483 10.4079 13.7709 10.4156 13.7893 10.4298C13.8681 10.4992 13.9386 10.5775 13.9993 10.6631C14.3891 11.2628 14.6916 11.9149 14.8976 12.5998C15.4787 14.4287 15.9309 16.296 16.2509 18.1881C16.2685 18.2803 16.3058 18.3676 16.3601 18.4441C16.4145 18.5206 16.4847 18.5845 16.5659 18.6315C16.6509 18.6745 16.7449 18.697 16.8401 18.697C16.9354 18.697 17.0293 18.6745 17.1143 18.6315C17.9671 18.2489 18.8994 18.0768 19.8326 18.1298C20.2742 18.1592 20.703 18.2904 21.0856 18.513C21.4681 18.7356 21.7939 19.0437 22.0376 19.4131C22.3858 20.0725 22.5433 20.8159 22.4926 21.5598C22.4471 22.8012 22.338 24.0395 22.1659 25.2698C22.1481 25.5054 22.113 25.7394 22.0609 25.9698C21.9793 26.3431 21.8859 26.7048 21.7926 27.0431C21.7766 27.0952 21.7711 27.15 21.7766 27.2042C21.782 27.2584 21.7983 27.311 21.8244 27.3588C21.8505 27.4067 21.8859 27.4488 21.9285 27.4827C21.9712 27.5167 22.0201 27.5418 22.0726 27.5565C22.1778 27.5856 22.2902 27.5727 22.386 27.5205C22.4818 27.4682 22.5535 27.3807 22.5859 27.2765C22.6909 26.9148 22.8076 26.5415 22.9009 26.1098C22.9943 25.6781 23.0059 25.5731 23.0409 25.3165C23.3063 23.8452 23.4507 22.3547 23.4726 20.8598C23.4575 20.1538 23.2734 19.4617 22.9359 18.8415Z" fill="#5A8C7C"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.445 2.33305C11.4272 2.55436 11.4272 2.77675 11.445 2.99805C11.445 3.28972 11.5267 3.52305 11.5384 3.62805C11.55 3.73305 11.7367 4.51472 11.8067 4.79472C11.97 5.42472 12.6934 5.01639 12.67 4.87639C12.6757 4.84946 12.6757 4.82165 12.67 4.79472C12.6765 4.76788 12.6765 4.73989 12.67 4.71305C12.67 4.44472 12.7517 3.80305 12.7867 3.62805C12.8001 3.39491 12.8001 3.16119 12.7867 2.92805C12.8152 2.73095 12.8308 2.53219 12.8334 2.33305C12.3667 -0.536946 12.3667 -0.000279013 11.9934 -0.000279013C11.62 -0.000279013 11.6667 -0.291946 11.445 2.33305Z" fill="#5A8C7C"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.69147 10.9314C8.69147 10.8264 8.60981 10.5931 8.23647 10.4181C7.86042 10.265 7.46941 10.1516 7.06981 10.0797C6.90667 10.0683 6.74294 10.0683 6.57981 10.0797C6.40136 10.062 6.22159 10.062 6.04314 10.0797C5.52407 10.1373 5.03931 10.3674 4.66647 10.7331C4.38647 11.1764 4.66647 11.2581 6.28814 11.4214C6.51725 11.4389 6.74736 11.4389 6.97647 11.4214C8.25981 11.3397 8.69147 11.4097 8.69147 10.9314Z" fill="#5A8C7C"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.2183 5.27301C6.52163 5.47134 6.7433 5.70468 7.01163 5.89134C7.27997 6.07801 7.60663 6.25301 7.92163 6.46301C8.24468 6.68622 8.60993 6.84105 8.99497 6.91801C9.05012 6.91801 9.10474 6.90715 9.15569 6.88604C9.20665 6.86493 9.25295 6.834 9.29195 6.795C9.33095 6.756 9.36189 6.7097 9.383 6.65874C9.4041 6.60778 9.41497 6.55317 9.41497 6.49801C9.40575 6.35258 9.34348 6.21558 9.23997 6.11301C9.1233 5.96134 8.7383 5.73968 8.6333 5.62301C8.39687 5.32509 8.13536 5.04797 7.85163 4.79468C7.53377 4.55068 7.18452 4.35056 6.8133 4.19968C6.61497 4.12968 5.7983 3.67468 5.35497 3.81468C5.2383 3.81468 4.9933 4.14134 5.35497 4.50301C5.45997 4.66634 5.99663 5.08634 6.2183 5.27301Z" fill="#5A8C7C"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8935 6.10149C17.1152 5.96149 17.5235 5.86815 17.9319 5.62315C18.1706 5.4857 18.387 5.31259 18.5735 5.10982C18.7935 4.91944 18.9684 4.68247 19.0855 4.4161C19.2025 4.14973 19.2588 3.86064 19.2502 3.56982C19.2502 3.46042 19.2076 3.35532 19.1313 3.27689C19.0551 3.19845 18.9512 3.15286 18.8419 3.14982C18.5269 3.14982 19.0285 3.05649 17.5352 4.18815C17.4106 4.27545 17.2935 4.37302 17.1852 4.47982C16.8566 4.82861 16.5778 5.22123 16.3569 5.64649C16.323 5.6801 16.2961 5.72009 16.2778 5.76414C16.2594 5.80819 16.25 5.85544 16.25 5.90315C16.25 5.95087 16.2594 5.99812 16.2778 6.04217C16.2961 6.08622 16.323 6.1262 16.3569 6.15982C16.3955 6.19232 16.4402 6.21665 16.4885 6.23136C16.5368 6.24607 16.5875 6.25084 16.6377 6.24539C16.6878 6.23994 16.7364 6.22437 16.7803 6.19964C16.8243 6.17491 16.8628 6.14152 16.8935 6.10149Z" fill="#5A8C7C"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2461 10.7096C18.2461 11.3046 18.4211 11.0946 19.6811 11.3046C19.9803 11.3223 20.2802 11.3223 20.5794 11.3046C21.0228 11.2113 21.3961 11.0246 21.8394 10.9313C21.9373 10.9148 22.0263 10.8641 22.0904 10.7883C22.1545 10.7125 22.1897 10.6164 22.1897 10.5171C22.1897 10.4178 22.1545 10.3217 22.0904 10.2459C22.0263 10.1701 21.9373 10.1194 21.8394 10.1029C21.3773 9.99115 20.9032 9.9363 20.4278 9.93959C20.1375 9.96916 19.8492 10.0159 19.5644 10.0796C19.4011 10.1379 18.8411 10.3479 18.6194 10.4529C18.3978 10.5579 18.2461 10.6746 18.2461 10.7096Z" fill="#5A8C7C"/> </g> </svg></span>Physical &amp; Sensory</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Hand-eye coordination and fine motor development</li><li>Balance, rhythm, and bodily coordination</li><li>Sensory integration</li><li>Spatial awareness</li><li>Practical life skills</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M5.75167 4.66689C5.85531 4.68374 5.96139 4.65882 6.04668 4.59758C6.13197 4.53635 6.18951 4.4438 6.20667 4.34022C6.25674 4.05195 6.33892 3.7702 6.45167 3.50022C6.55916 3.2523 6.68798 3.01418 6.83667 2.78855C7.02487 2.50458 7.25724 2.25251 7.52501 2.04189C7.79357 1.83414 8.08763 1.66162 8.40001 1.52855C8.86584 1.32494 9.3751 1.24073 9.88167 1.28355C10.6586 1.3402 11.3996 1.63333 12.005 2.12355C12.5602 2.50182 12.9907 3.03629 13.242 3.65933C13.4933 4.28236 13.5541 4.96595 13.4167 5.62355C13.4001 5.66636 13.3925 5.71208 13.3942 5.75793C13.3959 5.80379 13.4069 5.84882 13.4265 5.89029C13.4462 5.93176 13.474 5.9688 13.5084 5.99916C13.5429 6.02952 13.5831 6.05256 13.6267 6.06688C13.6703 6.08151 13.7165 6.08737 13.7624 6.08414C13.8083 6.0809 13.8532 6.06864 13.8943 6.04805C13.9355 6.02746 13.9722 5.99894 14.0024 5.96414C14.0325 5.92933 14.0555 5.88892 14.07 5.84522C14.3647 5.03225 14.4042 4.1487 14.1832 3.31268C13.9622 2.47666 13.4913 1.72803 12.8333 1.16689C12.0344 0.460068 11.0173 0.0483185 9.95167 0.000219494C9.22826 -0.0233862 8.51157 0.145721 7.87501 0.490219C7.48394 0.706373 7.12305 0.973113 6.80167 1.28355C6.48259 1.59155 6.21127 1.94545 5.99667 2.33355C5.85133 2.61838 5.73034 2.91499 5.63501 3.22022C5.53307 3.52726 5.46271 3.8439 5.42501 4.16522C5.40731 4.21981 5.40205 4.27766 5.40959 4.33455C5.41714 4.39144 5.43731 4.44592 5.46862 4.49401C5.49993 4.5421 5.5416 4.58258 5.59058 4.61249C5.63955 4.6424 5.69459 4.66099 5.75167 4.66689Z" fill="#9F7325"/> <path d="M19.3909 5.83347C19.7418 5.27222 20.0611 4.69188 20.3475 4.09514C20.9075 2.92847 21.2925 1.85514 21.5142 1.35347C21.5142 1.24847 21.6309 1.1668 21.6192 1.1318C22.3832 1.53311 23.0486 2.09893 23.5675 2.78847C24.2699 3.9227 24.7306 5.18968 24.9209 6.51014C24.9821 6.89621 25.0172 7.28599 25.0259 7.6768C25.1075 8.22514 26.1925 8.22514 26.2625 7.59514C26.2813 7.17773 26.2578 6.7595 26.1925 6.3468C26.0501 5.60244 25.8191 4.87783 25.5042 4.18847C25.1828 3.51189 24.7918 2.87065 24.3375 2.27514C23.8141 1.63866 23.1672 1.11479 22.4359 0.735136C22.1609 0.576628 21.8719 0.443843 21.5725 0.33847C21.4963 0.310192 21.4139 0.302853 21.3339 0.317215C21.2539 0.331578 21.1792 0.367117 21.1175 0.420136C21.0009 0.501803 19.8342 2.33347 19.1925 3.50014C18.8659 4.0718 18.5625 4.6668 18.2825 5.2618C17.8159 6.23014 17.6175 6.7668 17.4075 7.23347C17.1975 7.70014 17.8975 7.80514 18.3292 7.5368C18.6675 7.07014 19.0059 6.49847 19.3909 5.83347Z" fill="#9F7325"/> <path d="M24.5934 11.8067C24.3076 12.9391 23.7691 13.9921 23.0184 14.8867C22.54 15.4234 21.7584 16.2984 21.3384 16.7067C21.0761 16.1464 20.7759 15.6046 20.44 15.085C20.1206 14.6326 19.7738 14.2002 19.4017 13.79C19.0984 13.44 18.935 13.265 18.725 13.0434C18.1417 12.7284 17.6517 13.0434 17.815 13.405C18.0055 13.7777 18.2158 14.1399 18.445 14.49C18.7265 14.9657 19.0342 15.4253 19.3667 15.8667C19.9617 16.6017 20.65 17.22 21.0584 17.6867C21.0851 17.7244 21.119 17.7564 21.1581 17.7809C21.1972 17.8054 21.2408 17.822 21.2864 17.8295C21.3319 17.8371 21.3785 17.8356 21.4235 17.8251C21.4684 17.8146 21.5109 17.7953 21.5484 17.7684C21.5484 17.7684 22.5634 16.7067 23.73 15.5634C24.9036 14.3626 25.7127 12.8537 26.0634 11.2117C26.1913 10.6763 26.2617 10.1287 26.2734 9.57838C26.1917 8.93671 25.1067 9.15838 25.0484 9.97504C24.968 10.6011 24.8153 11.2158 24.5934 11.8067Z" fill="#9F7325"/> <path d="M27.3111 8.2599C27.1595 8.2599 22.3295 7.89823 20.7195 7.81656C19.8795 7.81656 16.5895 7.72323 16.3095 7.7349C14.6295 7.7349 12.8095 7.82823 12.2378 7.85156C11.6661 7.8749 11.5611 8.72656 12.0861 8.70323C12.9728 8.7849 14.6061 8.91323 14.9678 8.9249H16.3328C16.8811 8.9249 17.4995 9.01823 18.0478 9.04156C18.1411 9.04156 24.5345 9.15823 27.3811 9.04156C27.4381 9.05144 27.4966 9.04875 27.5524 9.03366C27.6082 9.01858 27.6601 8.99147 27.7043 8.95423C27.7486 8.917 27.7841 8.87054 27.8085 8.81811C27.8329 8.76569 27.8456 8.70856 27.8456 8.65073C27.8456 8.5929 27.8329 8.53577 27.8085 8.48334C27.7841 8.43092 27.7486 8.38446 27.7043 8.34723C27.6601 8.30999 27.6082 8.28288 27.5524 8.2678C27.4966 8.25271 27.4381 8.25001 27.3811 8.2599H27.3111Z" fill="#9F7325"/> <path d="M20.9183 10.1267C20.9528 10.3524 20.9203 10.5832 20.8249 10.7905C20.7296 10.9979 20.5754 11.1728 20.3816 11.2934C19.8151 11.5537 19.2139 11.7306 18.5966 11.8184C17.2176 12.0482 15.8273 12.204 14.4317 12.2851H13.9766C13.8989 12.2929 13.8236 12.3167 13.7553 12.3548C13.6871 12.3929 13.6274 12.4446 13.58 12.5067C13.4969 12.7227 13.4534 12.952 13.4517 13.1834V16.9051C13.6027 17.8103 13.8052 18.7062 14.0583 19.5884C14.7117 22.0267 15.6333 24.8617 15.7733 25.5734C15.8667 26.0867 15.7733 26.5067 15.4 26.6234C15.0267 26.7401 14.6183 26.5651 14.1517 26.1217C13.5911 25.3372 13.0993 24.5058 12.6817 23.6367C11.6667 21.8051 10.5 19.6001 10.5 19.6001C10.4376 19.498 10.349 19.4147 10.2432 19.3588C10.1375 19.303 10.0187 19.2766 9.89932 19.2826C9.77991 19.2886 9.66432 19.3266 9.56471 19.3928C9.4651 19.4589 9.38517 19.5507 9.33332 19.6584C8.57237 21.4876 7.63459 23.2381 6.53332 24.8851C6.14091 25.5003 5.63866 26.0382 5.05165 26.4717C4.94174 26.5765 4.80292 26.6458 4.65316 26.6708C4.5034 26.6957 4.34959 26.6752 4.21165 26.6117C4.06428 26.535 3.9407 26.4195 3.85433 26.2776C3.76795 26.1357 3.72207 25.9728 3.72165 25.8067C3.73615 25.3529 3.84753 24.9073 4.04832 24.5001C4.50332 23.4384 5.41332 21.6651 5.96165 20.0434C6.21419 19.3403 6.37115 18.6066 6.42832 17.8617V16.0301C6.42832 14.6651 6.28832 13.3117 6.28832 13.3117C6.28419 13.2124 6.25255 13.1162 6.19693 13.0338C6.14131 12.9514 6.06389 12.886 5.97332 12.8451C5.97332 12.8451 4.38665 12.0517 3.06832 11.1884C2.48778 10.8876 1.98161 10.4611 1.58665 9.94006C1.43828 9.64746 1.35328 9.32685 1.3372 8.99918C1.32111 8.6715 1.37431 8.34412 1.49332 8.03839C1.67038 7.7639 1.9031 7.52964 2.17642 7.35078C2.44974 7.17192 2.75757 7.05243 3.07998 7.00006C4.23489 6.79741 5.40958 6.73084 6.57998 6.80173C7.76193 6.80522 8.93842 6.96209 10.08 7.26839C10.3717 7.37339 10.4883 7.80506 10.4883 8.21339C10.5077 8.4059 10.4759 8.60012 10.3959 8.77634C10.316 8.95255 10.1909 9.10449 10.0333 9.21673C9.56595 9.40998 9.06855 9.52052 8.56332 9.54339C7.64165 9.62506 6.62665 9.62506 6.06665 9.62506C5.96145 9.62506 5.86055 9.66685 5.78616 9.74124C5.71178 9.81563 5.66998 9.91652 5.66998 10.0217C5.67292 10.126 5.71566 10.2252 5.78942 10.299C5.86318 10.3727 5.96238 10.4155 6.06665 10.4184C7.06728 10.4415 8.06842 10.4064 9.06498 10.3134C9.54103 10.3046 10.0085 10.1848 10.43 9.96339C12.4016 8.33006 11.2467 6.56839 10.2317 6.27673C9.05534 5.98892 7.84931 5.84012 6.63832 5.83339C5.37201 5.73797 4.09879 5.79673 2.84665 6.00839C2.37911 6.09096 1.93448 6.272 1.54225 6.53952C1.15002 6.80704 0.819173 7.15491 0.571651 7.56006C0.37575 7.99257 0.274414 8.46191 0.274414 8.93673C0.274414 9.41154 0.37575 9.88088 0.571651 10.3134C0.906049 10.8973 1.3788 11.3901 1.94832 11.7484C2.96531 12.462 4.02507 13.1127 5.12165 13.6967C5.12165 14.1634 5.19165 15.0967 5.21498 16.0301V17.7917C5.12297 18.6368 4.90266 19.463 4.56165 20.2417C4.00165 21.6301 3.25498 23.0534 2.85832 23.9517C2.50061 24.6738 2.36655 25.4863 2.47332 26.2851C2.53619 26.5959 2.66714 26.8889 2.85676 27.1431C3.04638 27.3972 3.28996 27.6062 3.56998 27.7551C4.66665 28.3501 5.83332 27.7901 6.99998 26.4951C8.20099 24.9456 9.20428 23.2526 9.98665 21.4551C10.5117 22.4467 11.2583 23.8584 11.9117 25.0134C12.2929 25.766 12.7503 26.4775 13.2767 27.1367C13.5917 27.4892 13.9988 27.7468 14.4522 27.8808C14.9055 28.0148 15.3873 28.0197 15.8433 27.8951C16.3154 27.6975 16.6966 27.3308 16.9125 26.8668C17.1283 26.4029 17.163 25.875 17.01 25.3867C16.8583 24.6634 15.8433 21.7934 15.1783 19.3434C14.925 18.503 14.7147 17.6502 14.5483 16.7884V13.2884C15.715 13.1834 19.53 12.8801 20.895 12.0517C21.225 11.8369 21.4884 11.534 21.6554 11.1774C21.8224 10.8207 21.8863 10.4245 21.84 10.0334C21.7 8.92506 20.7083 8.86673 20.9183 10.1267Z" fill="#9F7325"/> </g> </svg></span>Character &amp; Purpose</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Confidence without over-reliance on external validation</li><li>Sense of meaning and purpose</li><li>Sense of vocation — work as meaningful contribution, not just livelihood</li><li>Moral reasoning and ethical awareness</li><li>Reverence, gratitude, and wonder</li><li>Initiative and self-directed activity</li><li>Ability to sustain commitment to something larger than oneself</li><li>Development of personal identity and individuality</li></ul></div></details>
+          <details><summary><span class="row"><span class="mini"><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0615 16.8464C14.6065 15.0847 12.8799 14.7114 11.9232 16.5197C11.768 16.184 11.5636 15.8733 11.3165 15.5981C11.1274 15.4699 10.9145 15.3808 10.6904 15.336C10.4664 15.2912 10.2356 15.2916 10.0117 15.3373C9.78784 15.3829 9.57533 15.4729 9.38668 15.6018C9.19803 15.7307 9.03705 15.896 8.91319 16.0881C8.81776 15.8791 8.69624 15.6831 8.55152 15.5047C8.23428 15.1873 7.82688 14.9755 7.38485 14.8981C7.16271 14.8601 6.93432 14.8872 6.72728 14.9762C6.52024 15.0653 6.34342 15.2123 6.21819 15.3997C4.93485 17.4997 5.83319 20.288 7.38485 22.1664C8.18882 23.0741 9.16932 23.8085 10.2665 24.3247C10.4973 24.4595 10.7091 24.6242 10.8965 24.8147C11.0015 25.433 10.8965 27.533 10.8965 27.673C10.9038 27.7497 10.9346 27.8223 10.9847 27.8808C11.0349 27.9393 11.1018 27.9808 11.1765 27.9997C11.4332 28.058 11.6432 27.008 11.6549 26.9147C11.7482 24.173 12.4949 24.6397 9.68319 22.6914C8.01485 21.5831 6.18319 18.1414 7.19819 16.1464C7.40819 16.3331 7.74652 15.8664 8.14319 17.0331C8.53985 18.1997 8.53985 19.763 9.96318 20.9064C10.2782 21.163 10.5815 21.7814 10.9782 21.6414C11.8299 21.5247 10.1615 20.0781 9.72985 19.1914C8.65652 16.9981 10.0215 15.0497 10.8965 17.2197C11.3 18.5452 11.799 19.8398 12.3899 21.093C12.6232 21.618 13.2182 21.1864 13.2182 21.093C13.2182 20.9997 12.7982 19.413 12.7749 19.3197C12.6699 18.8997 12.6582 18.608 12.4365 17.733C12.6232 17.2897 13.3115 16.3447 13.6032 16.6714C13.8949 16.9981 14.1282 19.273 15.5165 20.6614C15.5884 20.7246 15.6808 20.7597 15.7766 20.7602C15.8724 20.7606 15.9651 20.7264 16.0376 20.6639C16.1101 20.6013 16.1575 20.5146 16.1711 20.4198C16.1847 20.325 16.1635 20.2285 16.1115 20.1481C15.5239 19.1377 15.1655 18.0106 15.0615 16.8464Z" fill="#3E7664"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.9223 17.4998C21.0123 15.9831 19.1573 16.8114 18.7607 18.2698C18.6489 18.7521 18.5087 19.2274 18.3407 19.6931C18.0373 20.4631 17.419 21.1398 16.824 20.8598C16.7849 20.8383 16.742 20.8248 16.6977 20.8199C16.6534 20.8151 16.6086 20.819 16.5658 20.8314C16.523 20.8439 16.4831 20.8646 16.4483 20.8925C16.4136 20.9204 16.3846 20.9549 16.3632 20.9939C16.3417 21.033 16.3282 21.0759 16.3233 21.1202C16.3185 21.1645 16.3224 21.2094 16.3348 21.2521C16.3473 21.2949 16.368 21.3349 16.3959 21.3696C16.4238 21.4044 16.4583 21.4333 16.4973 21.4548C17.2207 21.8864 18.399 21.6648 19.1923 20.1014C19.4378 19.6058 19.6521 19.0954 19.834 18.5731C20.3823 17.1031 21.7007 18.3398 20.8723 20.6031C20.044 22.8664 17.9323 23.5198 17.909 24.5698C17.9632 25.3845 18.124 26.1886 18.3873 26.9614C18.609 27.5914 19.2273 27.6031 19.2623 27.0898C19.0596 26.4248 18.9266 25.7406 18.8657 25.0481C18.7957 24.1381 18.644 25.1764 19.9507 23.7531C21.8407 22.4348 23.1473 19.6348 21.9223 17.4998Z" fill="#3E7664"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8182 9.33261C18.3749 8.97094 17.9782 9.48427 17.0216 9.97427C16.8699 10.0793 16.7182 10.2076 16.5666 10.3359C16.2516 10.8726 16.8116 11.4209 17.4999 11.1059C18.7482 9.82261 19.2849 9.76427 18.8182 9.33261Z" fill="#3E7664"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0499 6.48646C22.0304 6.34727 21.9694 6.21718 21.8749 6.11312C21.1983 5.35479 13.9766 6.42812 14.9916 10.4881C15.0966 10.9081 15.2599 11.2465 15.5983 11.3165C15.4349 11.5265 15.3066 11.6781 15.0966 11.9931C14.8656 11.9092 14.6274 11.8467 14.3849 11.8065C14.175 11.0545 13.9138 10.3178 13.6033 9.60146C14.7699 9.41479 15.7733 5.94979 13.1016 3.06813C12.0983 1.98313 8.70326 -0.0702083 7.9216 -0.000208254C5.9616 0.151458 5.83326 5.98479 6.99993 8.28312C8.1666 10.8381 11.0249 11.6665 12.5766 10.4998C12.7983 10.9315 12.9966 11.3631 13.1833 11.7948C11.4198 12.1148 9.82085 13.0338 8.6566 14.3965C8.62342 14.4281 8.597 14.4661 8.57895 14.5082C8.5609 14.5503 8.5516 14.5956 8.5516 14.6415C8.5516 14.6873 8.5609 14.7326 8.57895 14.7747C8.597 14.8168 8.62342 14.8549 8.6566 14.8865C9.0766 15.3065 9.2166 14.4548 11.1999 13.5915C11.9107 13.2624 12.6804 13.0799 13.4633 13.0548C14.4083 12.9848 16.7766 14.5365 17.3016 15.1315C17.8232 15.7221 18.2413 16.3966 18.5383 17.1265C18.6048 17.2085 18.7012 17.2607 18.8062 17.2716C18.9112 17.2825 19.0163 17.2513 19.0983 17.1848C19.1803 17.1183 19.2325 17.0219 19.2434 16.9169C19.2544 16.8119 19.2231 16.7068 19.1566 16.6248C18.6585 15.0057 17.6262 13.6033 16.2283 12.6465C16.4232 12.4008 16.5378 12.1011 16.5566 11.788C16.5754 11.4749 16.4974 11.1637 16.3333 10.8965C16.0066 10.5465 15.7616 10.3481 15.7499 9.91646C15.6683 7.78146 18.5849 7.41979 20.6966 7.24479C20.7111 8.35919 20.5049 9.46544 20.0899 10.4998C19.9035 11.0025 19.5702 11.4374 19.1333 11.7481C18.9031 11.8824 18.6414 11.9531 18.3749 11.9531C18.1085 11.9531 17.8468 11.8824 17.6166 11.7481C17.5775 11.7137 17.5321 11.6872 17.4828 11.6703C17.4335 11.6534 17.3813 11.6464 17.3293 11.6496C17.2773 11.6529 17.2265 11.6664 17.1797 11.6893C17.1329 11.7122 17.0911 11.7441 17.0566 11.7831C17.0221 11.8222 16.9957 11.8677 16.9788 11.917C16.9619 11.9662 16.9549 12.0184 16.9581 12.0704C16.9614 12.1224 16.9748 12.1732 16.9977 12.22C17.0206 12.2668 17.0525 12.3087 17.0916 12.3431C17.5528 12.6441 18.0925 12.8024 18.6433 12.7981C20.6849 12.6698 21.6999 10.0331 21.9216 7.97979C22.1666 6.36979 22.0966 6.81313 22.0499 6.48646ZM9.64827 9.77646C7.61827 8.74979 7.31493 5.97313 7.58326 3.70979C7.62582 3.13636 7.71162 2.56697 7.83993 2.00646C8.1666 0.758125 11.6666 3.19646 12.3083 3.82646C12.8144 4.30319 13.2182 4.87798 13.495 5.51581C13.7718 6.15365 13.9158 6.84116 13.9183 7.53646C13.8833 7.97979 12.1216 11.0365 9.64827 9.77646Z" fill="#3E7664"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10049 4.33956C9.02338 4.42174 8.98047 4.5302 8.98047 4.64289C8.98047 4.75558 9.02338 4.86404 9.10049 4.94623C9.27549 5.19123 10.9322 7.51289 11.7722 8.91289C12.4022 9.34456 12.9388 8.69123 12.6238 8.09623C12.0864 7.04862 11.3675 6.10457 10.5005 5.30789C10.2322 5.05123 9.33382 4.14123 9.10049 4.33956Z" fill="#3E7664"/> </g> </svg></span>Relational &amp; Environmental</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Healthy attachment to the natural world</li><li>Sensitivity to beauty and aesthetic meaning in the world</li><li>Stewardship — a felt sense of responsibility toward future generations</li><li>Capacity for genuine dialogue across difference</li><li>Cultural appreciation and respect for others</li><li>Civic responsibility</li></ul></div></details>
+        </div>
+      <div class="qcard">
+        <p class="qt">&ldquo;Being personally acquainted with a number of Waldorf students, I can say that they come closer to realizing their own potential than practically anyone I know.&rdquo;</p>
+        <img class="avatar" src="https://flowformstudio.github.io/summerfieldwaldorf/images/weizenbaum.png" alt="Joseph Weizenbaum" />
+        <div class="nm">Joseph Weizenbaum</div>
+        <div class="role">Professor Emeritus<br/>Massachusetts Institute of Technology</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec parch"><img class="leaf-decor d-tl" src="https://flowformstudio.github.io/summerfieldwaldorf/images/decor/leaf3.svg" alt="" aria-hidden="true" /><img class="leaf-decor d-tr" src="https://flowformstudio.github.io/summerfieldwaldorf/images/decor/leaf2.svg" alt="" aria-hidden="true" />
+  <div class="wrap">
+    <p class="eyebrow center" style="text-align:center">From our families</p>
+    <div class="testi">
+      <div class="qmark">&ldquo;</div>
+      <div class="t-track" id="tTrack">
+        <div class="t-slide on"><p class="t-q">We were anxious about the move from home to school — would she be ready, would she feel safe so far from us? What carried us through was the teachers. Their <em>skill, love, and care</em> made the transition feel natural, and before long she was walking in on her own each morning.</p><p class="t-attr">Parent · Sebastopol</p></div>
+        <div class="t-slide"><p class="t-q">What I didn't expect was the community. Years in, with older kids now, we've made <em>friendships that will last a lifetime.</em> The support started early and never let up — those families are still some of our closest.</p><p class="t-attr">Parent · Windsor</p></div>
+        <div class="t-slide"><p class="t-q">When I first walked into my daughter’s kindergarten classroom, I was struck by its simplicity, beauty, and calm. Over the years, I’ve come to see and tremendously value the <em>sophistication and wisdom behind Summerfield’s approach</em> to education and child development. Watching my daughter thrive here says it all.</p><p class="t-attr">Parent · Santa Rosa</p></div>
+      </div>
+      <div class="t-nav">
+        <button class="round-btn" data-t="prev" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="dots" id="tDots"></div>
+        <button class="round-btn" data-t="next" aria-label="Next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec white">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Common Questions</p><h2 class="ttl">Frequently Asked Questions</h2></div>
+    <div class="acc faq">
+      <details><summary>Does Summerfield offer TK and Kindergarten? <span class="plus"></span></summary><div class="panel"><p>Yes. Our Kindergarten serves children ages 4–6, covering what would elsewhere be considered both Transitional Kindergarten (TK) and Kindergarten. Rather than separating these into distinct grades, we hold them together in a mixed-age setting where younger and older children learn alongside one another — younger children learn through the example of older ones, while older children grow in confidence and capacity as helpers and leaders.</p></div></details>
+      <details><summary>What does a typical kindergarten day look like? <span class="plus"></span></summary><div class="panel"><p>Our days follow a steady, predictable rhythm that helps children feel secure and at home. A typical day unfolds like this:</p><ul class="schedule"><li>8:15 am — Gates open to the ECE Village</li><li>8:30 — Nature walk</li><li>8:45 — Circle</li><li>9:00 — Daily activity</li><li>9:20 — Tidy up from activity &amp; free play</li><li>10:20 — Handwashing &amp; snack</li><li>10:50 — Free play and lunch preparation</li><li>11:40 — Tidy up and bathroom break</li><li>11:50 — Story time</li><li>12:10 pm — Lunch</li><li>12:30 — Chores</li><li>12:45 — First Kindergarten pick-up at the gate</li><li>12:45–5:30 — Optional aftercare, with flexible pick-up until 5:30 pm</li></ul><p>This gentle alternation between active and quiet, indoor and outdoor, and gathering together and free play mirrors the natural rhythm of breathing in and breathing out — a hallmark of the Waldorf early childhood day.</p></div></details>
+      <details><summary>Why don’t you accelerate academics in kindergarten? <span class="plus"></span></summary><div class="panel"><p>The kindergarten year is a time for building the foundation, not rushing the outcome. Drilling literacy and numeracy at this age can produce measurable short-term gains — but those gains often fade by second or third grade, and they can come at the cost of the broader neural integration the brain is primed to undergo at this age.</p><p>Reading, writing, and arithmetic are fundamentally abstract: a letter stands for a sound, a numeral for a quantity. The capacity to work fluently with abstraction grows out of years of concrete, embodied experience — handling real objects, moving through space, and entering imaginative worlds where one thing can stand for another. When we rush a child into symbols before that groundwork is laid, the learning sits on a thinner footing. Skills built before their developmental prerequisites are in place tend to be less durable. Just as important, pressure to perform before a child is ready can introduce stress and an early sense of failure — quietly eroding the curiosity and intrinsic motivation that sustain learning over a lifetime, and weakening the self-regulation and executive function that academic work later depends on.</p><p>So rather than delay learning, we sequence it — prioritizing the play, movement, narrative, and social experience that build that foundation. Our kindergarten cultivates the capacities — focus, memory, fine and gross motor coordination, and a love of story — that prepare children to meet first grade ready for formal academics. The aim is not a later start, but a more durable one: children who meet formal learning, and ultimately life, with confidence, curiosity, and enthusiasm.</p><p class="go-deeper"><b>Go deeper</b><a href="#">Read our full approach to early learning &amp; what the research shows →</a></p></div></details>
+      <details><summary>Where is Summerfield Waldorf School located? <span class="plus"></span></summary><div class="panel"><p>Summerfield Waldorf School &amp; Farm is located in Santa Rosa, California, in the heart of Sonoma County. Our campus sits on a beautiful, biodynamic farm and natural landscape, offering children daily connection to nature as part of their school experience.</p></div></details>
+      <details><summary>Where do Summerfield families come from? <span class="plus"></span></summary><div class="panel"><p>Families come from throughout West Sonoma County and the surrounding region — including Sebastopol, Santa Rosa, Forestville, Occidental, Graton, Guerneville, Windsor, Healdsburg, and Rohnert Park, as well as communities across Sonoma County.</p><p>Some families have chosen to relocate to Sonoma County specifically to be part of Summerfield’s Waldorf-inspired program. Others come from the East Bay — including Berkeley, Oakland, and San Francisco — as well as from across California and other parts of the country to join this community.</p></div></details>
+      <details><summary>What age should my child be to enroll in kindergarten? <span class="plus"></span></summary><div class="panel"><p>Our Kindergarten serves children from ages 4 (by June 1st) to 6. Because the first year often serves as a TK year, readiness is considered alongside age. Many children spend more than one year in kindergarten, and our teachers work closely with families to determine the right timing for each child. Please see our admissions page for current age and readiness guidelines.</p></div></details>
+      <details><summary>What is the tuition for Summerfield Kindergarten (2026–2027)? <span class="plus"></span></summary><div class="panel"><div class="tuition"><h4>TK/Kindergarten (4–6 year olds)</h4><div class="tu-line"><span>4-Day Program</span><span>$23,200/yr · $2,320/mo</span></div><div class="tu-line"><span>5-Day Program</span><span>$24,500/yr · $2,450/mo</span></div></div><p style="margin-top:16px">Tuition assistance is available for students in Kindergarten through 12th grade. We encourage families to explore our financial aid options as part of the admissions process.</p></div></details>
+      <details><summary>What are the health and immunization requirements for kindergarten? <span class="plus"></span></summary><div class="panel"><p>All children enrolling must be up to date on all age-appropriate immunizations prior to enrollment, with immunizations maintained throughout the school year.</p><p>In accordance with California state law, immunization exemptions are no longer accepted for private schools. Please refer to our Immunization Policy for full details.</p></div></details>
+      <details><summary>Do you provide meals and snacks? <span class="plus"></span></summary><div class="panel"><p>Yes. We offer wholesome, nutritious meals and snacks each day. Our menu features simple, nourishing recipes refined over more than 50 years — foods that children truly enjoy. Children often help with simple preparation, and whenever possible, ingredients are fresh and seasonal, with some coming directly from our school farm.</p></div></details>
+      <details><summary>Do you offer summer programs for kindergarten-aged children? <span class="plus"></span></summary><div class="panel"><p>Yes. Our Farm Camp is held in our Kindergarten Village and offers a gentle, nature-rich summer experience. Through crafts, song, storytelling, and play — along with time on the Farm and in the Permaculture Garden — children meet the rhythms of the natural world: caring for animals, gathering food, and engaging in meaningful work. These experiences nurture a sense of wonder, reverence, and connection to the living world.</p><p>Children turning 6 can also join our Circus Camp (ages 6–8), a fun and supportive way to experience a variety of circus arts and related crafts — juggling, unicycling, tumbling, clowning, and springboard &amp; mat work. Each Friday closes with a showcase performance for families, highlighting the skills learned during the week.</p></div></details>
+      <details><summary>Can we visit or tour the campus? <span class="plus"></span></summary><div class="panel"><p>Yes — visiting the campus is one of the best ways to experience the warmth and rhythm of the kindergarten firsthand. Tours offer a chance to see the classrooms, spend time in the outdoor spaces, and get a feel for the daily life of the program. You’ll also meet faculty and ask any questions about your child and the admissions process.</p><p>For more details or to schedule a visit, please see our Visit Us page.</p></div></details>
+      <details><summary>How do I apply to Summerfield’s kindergarten? <span class="plus"></span></summary><div class="panel"><p>The admissions process begins with an inquiry and a tour of the campus. Visit our admissions page for more information.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec parch cta" id="visit"><img class="cta-ornament" src="https://flowformstudio.github.io/summerfieldwaldorf/images/decor/ornament.svg" alt="" aria-hidden="true" />
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2 class="ttl">Come See It for Yourself</h2>
+        <p class="lede" style="margin-bottom:26px">A tour is the best way to feel the warmth and rhythm of the kindergarten — and the wider Summerfield community it lives within. Spend a morning with us.</p>
+        <a href="#" class="btn">Schedule a visit</a>
+      </div>
+      <div class="cta-photo"><img src="https://flowformstudio.github.io/summerfieldwaldorf/images/cta.jpg" alt="Children working together at a table in the kindergarten" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img class="footer-logo" src="https://flowformstudio.github.io/summerfieldwaldorf/images/footer-logo.png" alt="Summerfield Waldorf School &amp; Farm — Celebrating 50 Years" />
+      <p>A play-based, nature-rich Waldorf preschool on a working biodynamic farm in Santa Rosa, California. Serving families throughout Sonoma County for over 50 years.</p>
+    </div>
+    <div class="foot-col"><h4>Explore</h4><a href="#">Why Waldorf</a><a href="#">Our Approach</a><a href="#">A Day Here</a><a href="#">The Research</a></div>
+    <div class="foot-col"><h4>Admissions</h4><a href="#">Programs &amp; Tuition</a><a href="#visit">Schedule a Visit</a><a href="#">FAQ</a><a href="#">Apply</a></div>
+    <div class="foot-col"><h4>Visit</h4><p>655 Willowside Rd</p><p>Santa Rosa, CA 95401</p><p>(707) 575-7194</p><a href="#">Email Admissions</a></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Summerfield Waldorf School &amp; Farm. All rights reserved.</span>
+    <span>Santa Rosa · Sonoma County · Ages 2–4</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.getElementById('siteHead'),t=document.getElementById('navToggle'),n=document.getElementById('mobileNav');
+  function set(o){h.classList.toggle('open',o);t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  t.addEventListener('click',function(){set(!h.classList.contains('open'));});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+})();
+function carousel(trackId,dotsId,prevSel,nextSel,autoMs){
+  var track=document.getElementById(trackId); if(!track)return;
+  var slides=track.querySelectorAll('.slide,.t-slide'); var dotsWrap=document.getElementById(dotsId); var i=0; var timer=null;
+  slides.forEach(function(_,k){var b=document.createElement('button');b.className='dot'+(k===0?' on':'');b.setAttribute('aria-label','Slide '+(k+1));b.addEventListener('click',function(){go(k);reset();});dotsWrap.appendChild(b);});
+  function go(k){slides[i].classList.remove('on');dotsWrap.children[i].classList.remove('on');i=(k+slides.length)%slides.length;slides[i].classList.add('on');dotsWrap.children[i].classList.add('on');}
+  function start(){if(autoMs){timer=setInterval(function(){go(i+1);},autoMs);}}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function reset(){stop();start();}
+  document.querySelector(prevSel).addEventListener('click',function(){go(i-1);reset();});
+  document.querySelector(nextSel).addEventListener('click',function(){go(i+1);reset();});
+  if(autoMs){start();track.addEventListener('mouseenter',stop);track.addEventListener('mouseleave',start);}
+}
+carousel('gallery','galDots','[data-gal=prev]','[data-gal=next]',2500);
+carousel('tTrack','tDots','[data-t=prev]','[data-t=next]',10000);
+</script>
+<script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var sel='.hero-c,.sec-head,.card,.sys,.info-item,.gallery,.cap-row,.qcard,.brain-img,.testi,.faq,.cta .split>div';
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(e){e.classList.add('reveal');});
+  document.querySelectorAll('.cards .card').forEach(function(e,i){e.style.transitionDelay=((i%3)*0.09)+'s';});
+  document.querySelectorAll('.systems-grid .sys').forEach(function(e,i){e.style.transitionDelay=((i%2)*0.08)+'s';});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -7% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.acc details').forEach(function(d){
+    var p=d.querySelector('.panel'); var s=d.querySelector('summary'); if(!p||!s)return;
+    p.style.overflow='hidden';
+    if(d.open){p.style.height='auto';} else {p.style.height='0px';p.style.opacity='0';}
+    s.addEventListener('click',function(e){
+      e.preventDefault();
+      p.style.transition='height .32s cubic-bezier(.22,1,.36,1), opacity .26s ease';
+      if(!d.open){
+        d.open=true;
+        p.style.height='0px'; p.style.opacity='0';
+        var hh=p.scrollHeight;
+        requestAnimationFrame(function(){ p.style.height=hh+'px'; p.style.opacity='1'; });
+        p.addEventListener('transitionend',function te(ev){ if(ev.propertyName==='height'){p.style.height='auto'; p.removeEventListener('transitionend',te);} });
+      } else {
+        var hh=p.scrollHeight; p.style.height=hh+'px'; p.style.opacity='1';
+        requestAnimationFrame(function(){ p.style.height='0px'; p.style.opacity='0'; });
+        p.addEventListener('transitionend',function te(ev){ if(ev.propertyName==='height'){d.open=false; p.removeEventListener('transitionend',te);} });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
