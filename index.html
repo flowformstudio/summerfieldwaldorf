@@ -19,7 +19,8 @@
   --bodyf:'Mulish','Poppins',sans-serif;
   --wrap:1160px;
 }
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{overflow-x:hidden;}
 body{margin:0;font-family:var(--bodyf);color:var(--body);line-height:1.55;background:#fff;-webkit-font-smoothing:antialiased;}
 img{max-width:100%;display:block;}
 a{color:var(--ece-deep);text-decoration:none;}
@@ -256,6 +257,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   .foot-grid{grid-template-columns:1fr 1fr;gap:32px;}
 }
 @media(max-width:880px){
+  .brain-img{width:100%;margin-left:0;}
   .main-nav,.head-actions{display:none;}
   .nav-toggle{display:flex;}
   .head-in{padding:12px 22px;}
@@ -270,6 +272,13 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 }
 @media(max-width:620px){
   .wrap{padding:0 22px;}
+  .hero{min-height:auto;}
+  .hero .ov{background:linear-gradient(115deg,#f8faf0 0%,#f8faf0 56%,rgba(248,250,240,.8) 78%,rgba(248,250,240,.45) 100%);}
+  .hero .hero-in{padding:44px 22px;}
+  .hero h1{font-size:1.7rem;}
+  .hero p{max-width:100%;}
+  .hero .hero-c{max-width:100%;}
+  .hero .eyebrow{letter-spacing:1.1px;}
   .cards{grid-template-columns:1fr;gap:34px;}
   .caplist{grid-template-columns:1fr;}
   .foot-grid{grid-template-columns:1fr;}
