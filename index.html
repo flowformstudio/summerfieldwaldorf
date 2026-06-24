@@ -20,7 +20,7 @@
   --wrap:1160px;
 }
 html{scroll-behavior:smooth;}
-body{margin:0;font-family:var(--bodyf);color:var(--body);line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased;}
+body{margin:0;font-family:var(--bodyf);color:var(--body);line-height:1.55;background:#fff;-webkit-font-smoothing:antialiased;}
 img{max-width:100%;display:block;}
 a{color:var(--ece-deep);text-decoration:none;}
 h1,h2,h3,h4{font-family:var(--display);color:var(--ink);margin:0;}
@@ -29,17 +29,20 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);margin:0;}
 .ttl{font-family:var(--display);font-weight:700;line-height:1.12;color:var(--ink);letter-spacing:-.01em;margin:0 0 18px;}
 h1.ttl{font-size:clamp(2rem,4.4vw,2.9rem);}
 h2.ttl{font-size:clamp(1.7rem,3.6vw,2.5rem);}
-.lede{font-size:1.05rem;line-height:1.7;color:var(--body);}
+.lede{font-size:1.05rem;line-height:1.5;color:var(--body);}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px;}
 @media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;scroll-behavior:auto!important;}}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.02em;padding:14px 32px;border-radius:999px;background:var(--orange);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;}
 .btn:hover{background:var(--orange-deep);transform:translateY(-1px);box-shadow:0 8px 20px rgba(210,125,41,.28);color:#fff;}
-.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;padding:13px 30px;border-radius:999px;background:transparent;border:1.5px solid rgba(255,255,255,.75);color:#fff;cursor:pointer;transition:background .2s;}
-.btn-ghost-light:hover{background:rgba(255,255,255,.16);color:#fff;}
+.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:15px;padding:13px 30px;border-radius:999px;background:transparent;border:1.6px solid var(--orange);color:#fff;cursor:pointer;transition:background .2s,border-color .2s;}
+.btn-ghost-light:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
 .btn-green{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.05em;padding:13px 28px;border-radius:999px;background:var(--ece);color:#fff;border:none;cursor:pointer;transition:background .2s;}
 .btn-green:hover{background:var(--ece-deep);color:#fff;}
+.btn-outline-green{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.02em;padding:13px 28px;border-radius:999px;background:transparent;border:1.6px solid var(--ece);color:var(--ece-deep);transition:background .2s,border-color .2s;}
+.btn-outline-green:hover{background:rgba(154,162,51,.12);border-color:var(--ece-deep);}
+.btn-outline-green img{width:18px;height:18px;display:block;}
 
 /* header */
 .site-head{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line);}
@@ -51,12 +54,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   box-shadow:inset 0 0 0 1px rgba(154,162,51,.3);}
 .logo-txt{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--ink);letter-spacing:-.01em;line-height:1;}
 .logo-txt span{display:block;font-weight:500;font-size:.62rem;letter-spacing:.18em;color:var(--muted);margin-top:3px;}
+.logo-img{height:46px;width:auto;display:block;}
+.footer-logo{height:64px;width:auto;display:block;margin-bottom:2px;}
 .main-nav{display:flex;align-items:center;gap:26px;margin:0 auto;}
 .main-nav a{font-family:var(--display);font-weight:700;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);}
 .main-nav a:hover{color:var(--ece-deep);}
 .head-actions{display:flex;align-items:center;gap:14px;flex:0 0 auto;}
-.portal{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:9px 18px;}
-.portal:hover{border-color:var(--ece);color:var(--ece-deep);}
+.portal{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,color .2s;}
+.portal:hover{background:var(--ink);border-color:var(--ink);color:#fff;}
 .inquire{background:var(--orange);color:#fff;font-family:var(--display);font-weight:600;font-size:14px;border-radius:999px;padding:11px 26px;}
 .inquire:hover{background:var(--orange-deep);color:#fff;}
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:10px;border:none;background:transparent;cursor:pointer;margin-left:auto;}
@@ -72,15 +77,29 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .announce .sep{opacity:.55;}
 
 /* hero (text over image) */
-.hero{position:relative;height:clamp(440px,46vw,560px);overflow:hidden;}
+.hero{position:relative;height:clamp(520px,54vw,640px);overflow:hidden;}
 .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
-.hero .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(45,38,30,.84) 0%,rgba(45,38,30,.62) 34%,rgba(45,38,30,.12) 66%,rgba(45,38,30,0) 100%);}
-.hero .hero-in{position:relative;height:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px;display:flex;flex-direction:column;justify-content:center;}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(34,28,22,.94) 0%,rgba(34,28,22,.86) 26%,rgba(34,28,22,.55) 52%,rgba(34,28,22,.12) 80%,rgba(34,28,22,0) 100%);}
+.hero .hero-in{position:relative;height:100%;max-width:var(--wrap);margin:0 auto;padding:80px 32px;display:flex;flex-direction:column;justify-content:center;}
 .hero .hero-c{max-width:540px;}
 .hero .eyebrow{color:#f3dcbb;margin-bottom:18px;}
 .hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3rem);font-family:var(--display);font-weight:700;line-height:1.1;letter-spacing:-.01em;margin:0 0 18px;}
-.hero p{color:rgba(255,255,255,.92);font-size:1.05rem;line-height:1.65;margin:0 0 28px;max-width:460px;}
+.hero p{color:rgba(255,255,255,.92);font-size:1.05rem;line-height:1.45;margin:0 0 28px;max-width:460px;}
 .hero .btns{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* cta ornament */
+.cta-ornament{position:absolute;right:-22px;bottom:-26px;width:188px;opacity:.95;z-index:0;pointer-events:none;}
+@media(max-width:620px){.cta-ornament{width:130px;right:-18px;}}
+
+/* decorative leaves */
+.sec{position:relative;overflow:hidden;}
+.sec>.wrap,.info-band>.wrap{position:relative;z-index:1;}
+.leaf-decor{position:absolute;z-index:0;pointer-events:none;opacity:.9;}
+.d-cur{top:34px;right:-26px;width:140px;transform:rotate(10deg);}
+.d-cap{left:-34px;top:200px;width:150px;transform:rotate(-14deg);}
+.d-tl{left:-22px;bottom:24px;width:170px;transform:rotate(-6deg);}
+.d-tr{right:-30px;top:70px;width:200px;transform:scaleX(-1) rotate(6deg);}
+@media(max-width:880px){.leaf-decor{display:none;}}
 
 /* sections */
 .sec{padding:clamp(56px,7vw,88px) 0;}
@@ -94,7 +113,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .card .ic{width:78px;height:78px;border-radius:50%;background:rgba(154,162,51,.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
 .card .ic img{width:48px;height:48px;}
 .card h3{font-family:var(--display);font-weight:600;font-size:1.18rem;color:var(--ece-deep);margin:0 0 10px;}
-.card p{font-size:15px;line-height:1.7;color:var(--body);margin:0;}
+.card p{font-size:15px;line-height:1.55;color:var(--body);margin:0;}
 .card p strong{color:var(--ink);font-weight:600;}
 
 /* info band */
@@ -113,7 +132,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .gallery .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s;}
 .gallery .slide.on{opacity:1;visibility:visible;}
 .gallery .slide img{width:100%;height:100%;object-fit:cover;}
-.gal-nav{display:flex;align-items:center;gap:18px;margin-top:22px;justify-content:flex-start;}
+.gal-nav{display:flex;align-items:center;gap:18px;margin-top:18px;justify-content:center;}
 .round-btn{width:40px;height:40px;border:1.5px solid var(--line);background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:all .2s;}
 .round-btn:hover{background:var(--ece);color:#fff;border-color:var(--ece);}
 .dots{display:flex;gap:10px;}
@@ -123,7 +142,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 /* accordion */
 .acc details{border-bottom:1px solid var(--line);}
 .acc details:first-child{border-top:1px solid var(--line);}
-.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink);transition:color .2s;}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 4px;font-family:var(--display);font-weight:600;font-size:1rem;color:var(--ink);transition:color .2s;}
 .acc summary::-webkit-details-marker{display:none;}
 .acc summary:hover,.acc details[open]>summary{color:var(--ece-deep);}
 .acc .row{display:flex;align-items:center;gap:13px;}
@@ -134,23 +153,32 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .plus::before{top:50%;left:0;width:16px;height:2px;transform:translateY(-50%);}
 .plus::after{left:50%;top:0;width:2px;height:16px;transform:translateX(-50%);}
 details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:0;}
-.acc .panel{padding:0 4px 22px 4px;}
-.acc .panel p{font-size:15.5px;line-height:1.8;color:var(--body);margin:0 0 .8rem;}
-.caplist{list-style:none;margin:0;padding:2px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;}
+.acc .panel{padding:0 4px 20px 4px;}
+.acc .panel p{font-size:15.5px;line-height:1.6;color:var(--body);margin:0 0 .7rem;}
+.caplist{list-style:none;margin:0;padding:2px 0 0;display:grid;grid-template-columns:1fr;gap:0;}
 .caplist li{font-size:14.5px;color:var(--body);padding:7px 0;border-bottom:1px solid var(--line);}
+
+#capgroups summary{padding:12px 4px;font-size:1rem;}
+#capgroups .panel{padding-bottom:14px;}
+#capgroups .caplist li{padding:5px 0;font-size:14px;}
+#capgroups .mini{width:32px;height:32px;}
 
 /* neuroscience */
 .brain-wrap{max-width:760px;margin:0 auto;}
-.brain-img{width:100%;height:clamp(220px,28vw,300px);object-fit:cover;border-radius:16px;margin-bottom:30px;}
+.brain-img{width:100%;height:clamp(320px,40vw,470px);object-fit:cover;object-position:center 12%;border-radius:18px;margin-bottom:30px;}
 .systems-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 44px;max-width:900px;margin:30px auto 0;}
 .sys h4{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--ece-deep);margin:0 0 6px;}
-.sys p{font-size:14px;line-height:1.65;color:var(--body);margin:0;}
+.sys p{font-size:14px;line-height:1.5;color:var(--body);margin:0;}
 .center{text-align:center;}
 
+/* capacities row */
+.cap-row{display:grid;grid-template-columns:1fr .85fr;gap:38px;align-items:start;}
+@media(max-width:880px){.cap-row{grid-template-columns:1fr;gap:28px;}}
+
 /* quote card */
-.qcard{background:var(--ece-soft);border:1.5px solid rgba(154,162,51,.45);border-radius:20px;padding:42px 40px;text-align:center;}
-.qcard .qt{font-family:var(--display);font-weight:600;font-size:1.18rem;line-height:1.5;color:var(--ink);margin:0 0 24px;}
-.qcard .avatar{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;object-fit:cover;}
+.qcard{background:var(--ece-soft);border:1.5px solid rgba(154,162,51,.45);border-radius:20px;padding:48px 44px;text-align:center;align-self:start;}
+.qcard .qt{font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.5;color:var(--ink);margin:0 0 24px;}
+.qcard .avatar{width:104px;height:104px;border-radius:50%;margin:0 auto 16px;object-fit:cover;}
 .qcard .nm{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink);}
 .qcard .role{font-size:13px;color:var(--muted);}
 
@@ -179,10 +207,15 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 .foot-brand .logo-txt,.foot-brand .logo-txt span{color:#fff;}
 .foot-brand .logo-txt span{opacity:.85;}
 .foot-brand p{font-size:14px;line-height:1.7;opacity:.95;margin:16px 0 0;max-width:280px;}
-.foot-col h4{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px;}
+.foot-col h4{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px;color:#fff;}
 .foot-col a,.foot-col p{display:block;color:#fff;font-size:14.5px;opacity:.94;margin-bottom:11px;}
 .foot-col a:hover{text-decoration:underline;}
 .foot-bottom{max-width:var(--wrap);margin:38px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,.22);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;opacity:.9;}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
 
 /* responsive */
 @media(max-width:980px){
@@ -200,7 +233,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   .info-div{width:60%;height:1px;}
   .cta .split{grid-template-columns:1fr;}
   .cta-photo{order:-1;}
-  .hero .ov{background:linear-gradient(90deg,rgba(45,38,30,.86) 0%,rgba(45,38,30,.7) 55%,rgba(45,38,30,.4) 100%);}
+  .hero .ov{background:linear-gradient(90deg,rgba(34,28,22,.94) 0%,rgba(34,28,22,.82) 55%,rgba(34,28,22,.55) 100%);}
 }
 @media(max-width:620px){
   .wrap{padding:0 22px;}
@@ -228,8 +261,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 <header class="site-head" id="siteHead">
   <div class="head-in">
     <a href="#top" class="logo-mark" aria-label="Summerfield Waldorf School &amp; Farm">
-      <span class="logo-sun" aria-hidden="true"></span>
-      <span class="logo-txt">Summerfield<span>WALDORF SCHOOL &amp; FARM</span></span>
+      <img class="logo-img" src="images/logo.svg" alt="Summerfield Waldorf School &amp; Farm" />
     </a>
     <nav class="main-nav">
       <a href="#">About</a><a href="#">Admissions</a><a href="#curriculum">Curriculum</a><a href="#">Programs</a><a href="#">Farm</a><a href="#">Giving</a>
@@ -271,7 +303,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 </section>
 
 <!-- CURRICULUM -->
-<section class="sec parch" id="curriculum">
+<section class="sec parch" id="curriculum"><img class="leaf-decor d-cur" src="images/decor/leaf1.svg" alt="" aria-hidden="true" />
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Kindergarten Curriculum</p>
@@ -324,7 +356,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 <!-- A GENTLE STEP -->
 <section class="sec white">
   <div class="wrap">
-    <div class="split">
+    <div class="split" style="align-items:flex-start">
       <div>
         <div class="gallery" id="gallery">
           <div class="slide on"><img src="images/farm.jpg" alt="Wide view of the biodynamic farm with greenhouse and oak tree" /></div>
@@ -341,7 +373,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
       <div>
         <p class="eyebrow">Our Kindergarten</p>
         <h2 class="ttl">A gentle step into a wider world</h2>
-        <p class="lede" style="margin-bottom:22px">The kindergarten years carry a child from early childhood toward the threshold of formal learning. We've shaped every detail of the day — and every corner of the classroom — to honor that beginning.</p>
+        <p class="lede" style="margin-bottom:22px">The kindergarten years carry a child from early childhood toward the threshold of formal learning. We've shaped every detail of the day — and every corner of the classroom — to honor what that passage asks of them.</p>
         <div class="acc">
           <details open><summary>Preparing for learning, the Waldorf way <span class="plus"></span></summary><div class="panel"><p>We don't rush academics; we ready the child for them — building the attention, memory, language, and fine-motor capacities that reading and arithmetic will later rest upon.</p></div></details>
           <details><summary>The gift of mixed ages in TK and Kindergarten <span class="plus"></span></summary><div class="panel"><p>Younger children learn by looking up to the elders; older children grow in confidence and care by guiding the younger. The mixed-age room becomes a small, working community.</p></div></details>
@@ -355,15 +387,13 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 
 <!-- NEUROSCIENCE -->
 <section class="sec parch">
-  <div class="wrap brain-wrap center">
-    <img class="brain-img" src="images/brain.jpg" alt="Neural connections illuminate across a developing brain" />
-    <p class="eyebrow">Our Approach</p>
-    <h2 class="ttl">The neuroscience of our early childhood approach</h2>
-    <p class="lede" style="max-width:660px;margin:0 auto">Early childhood is a period of rapid brain development. In these years the brain forms connections faster than at any later stage — laying the architecture on which all later learning is built. Every part of our day is chosen to strengthen the systems that foundation depends on.</p>
-  </div>
-  <div class="wrap">
-    <h3 class="ttl center" style="font-size:1.4rem;margin:48px 0 6px">The systems we intentionally strengthen</h3>
-    <div class="systems-grid">
+  <div class="wrap brain-wrap">
+    <img class="brain-img" src="images/brain.jpg" alt="A child with a tree-branching mind amid books, patterns, and ideas" />
+    <p class="eyebrow">Early Childhood</p>
+    <h2 class="ttl" style="text-align:left">The neuroscience of our early childhood approach</h2>
+    <p class="lede" style="margin-bottom:0">Early childhood is a period of rapid brain development. In these years the brain forms connections faster than at any later stage — laying the architecture on which all later learning is built. Every part of our day is chosen to strengthen the systems that foundation depends on.</p>
+    <h3 class="ttl" style="text-align:left;font-size:1.4rem;margin:44px 0 22px">The systems we intentionally strengthen</h3>
+    <div class="systems-grid" style="max-width:none;margin:0">
       <div class="sys"><h4>Executive Function &amp; Attention</h4><p>Focus, working memory, impulse control, flexible thinking — supported by open-ended play, real responsibilities, and activities that require planning and persistence.</p></div>
       <div class="sys"><h4>Emotional Regulation</h4><p>Processing emotion, managing stress, returning to a regulated state — capacities shaped by warm relationship and an unhurried, predictable rhythm.</p></div>
       <div class="sys"><h4>Sensory Integration</h4><p>Organizing touch, movement, balance, and spatial awareness — the foundational capacity that underlies attention, regulation, and later academic skill.</p></div>
@@ -373,19 +403,18 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
       <div class="sys"><h4>Memory</h4><p>Encoding and retrieving meaningful experience. Early memory is supported by emotional salience, context, and narrative rather than repetition.</p></div>
       <div class="sys"><h4>Reward &amp; Motivation</h4><p>Curiosity, engagement, intrinsic motivation. Experiences of mastery and agency reinforce the association between effort and reward.</p></div>
     </div>
-    <div class="center" style="margin-top:40px"><a href="#" class="btn-green">Read our full approach &amp; the research</a></div>
+    <div style="margin-top:38px"><a href="#" class="btn-outline-green">Learn more <img src="images/icons/chevron-down.svg" alt="" /></a></div>
   </div>
 </section>
 
 <!-- CAPACITIES + QUOTE -->
-<section class="sec white">
-  <div class="wrap">
-    <div class="split" style="align-items:flex-start">
-      <div>
-        <p class="eyebrow">A different kind of education</p>
-        <h2 class="ttl">The capacities a Waldorf education develops</h2>
-        <p class="lede" style="margin-bottom:24px">Waldorf education follows a long arc — one that develops the knowledge, skills, and habits of mind students need to earn entry to competitive universities and pursue any field of study, while also nurturing the intellectual, emotional, social, creative, and practical capacities that help them flourish throughout life.</p>
-        <div class="acc" id="capgroups">
+<section class="sec white"><img class="leaf-decor d-cap" src="images/decor/leaf2.svg" alt="" aria-hidden="true" />
+  <div class="wrap" style="max-width:760px">
+    <p class="eyebrow">A different kind of education</p>
+    <h2 class="ttl" style="text-align:left">The capacities a Waldorf education develops</h2>
+    <p class="lede" style="margin-bottom:34px">Waldorf education follows a long arc — one that develops the knowledge, skills, and habits of mind students need to earn entry to competitive universities and pursue any field of study, while also nurturing the intellectual, emotional, social, creative, and practical capacities that help them flourish throughout life.</p>
+    <div class="cap-row">
+      <div class="acc" id="capgroups">
           <details open><summary><span class="row"><span class="mini"><img src="images/icons/cap-thinking.svg" alt="" width="22" height="22" /></span>Thinking &amp; learning</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Curiosity and intrinsic love of learning</li><li>Independent thinking</li><li>Flexible and original problem solving</li><li>Capacity to synthesize across disciplines</li><li>Capacity to think in systems</li><li>Comfort with not knowing — and continuing to inquire</li></ul></div></details>
           <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-self.svg" alt="" width="22" height="22" /></span>Self-regulation &amp; inner life</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Self-regulation and impulse control</li><li>Stillness and sustained attention</li><li>Resilience and frustration tolerance</li><li>Patience, perseverance, and follow-through</li><li>Acting from inner conviction</li><li>Reflection and introspection</li></ul></div></details>
           <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-emotional.svg" alt="" width="22" height="22" /></span>Emotional &amp; social</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Emotional intelligence and attunement</li><li>Empathy and compassion</li><li>Holding complexity in relationships</li><li>Repairing relationships after conflict</li><li>Listening skills</li><li>Collaboration and community</li><li>Leadership balanced with cooperation</li><li>Responsibility toward others</li></ul></div></details>
@@ -394,7 +423,6 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
           <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-character.svg" alt="" width="22" height="22" /></span>Character &amp; purpose</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Confidence without over-reliance on validation</li><li>Sense of meaning and purpose</li><li>Sense of vocation</li><li>Moral reasoning and ethical awareness</li><li>Reverence, gratitude, and wonder</li><li>Initiative and self-directed activity</li><li>Commitment to something larger</li><li>A developing personal identity</li></ul></div></details>
           <details><summary><span class="row"><span class="mini"><img src="images/icons/cap-relational.svg" alt="" width="22" height="22" /></span>Relational &amp; environmental</span><span class="plus"></span></summary><div class="panel"><ul class="caplist"><li>Healthy attachment to the natural world</li><li>Sensitivity to beauty and meaning</li><li>Stewardship of the earth</li><li>Genuine dialogue across difference</li><li>Cultural appreciation and respect</li><li>Civic responsibility</li></ul></div></details>
         </div>
-      </div>
       <div class="qcard">
         <p class="qt">&ldquo;Being personally acquainted with a number of Waldorf students, I can say that they come closer to realizing their own potential than practically anyone I know.&rdquo;</p>
         <img class="avatar" src="images/weizenbaum.png" alt="Joseph Weizenbaum" />
@@ -406,7 +434,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="sec parch">
+<section class="sec parch"><img class="leaf-decor d-tl" src="images/decor/leaf3.svg" alt="" aria-hidden="true" /><img class="leaf-decor d-tr" src="images/decor/leaf2.svg" alt="" aria-hidden="true" />
   <div class="wrap">
     <p class="eyebrow center" style="text-align:center">From our families</p>
     <div class="testi">
@@ -447,7 +475,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 </section>
 
 <!-- CTA -->
-<section class="sec parch cta" id="visit">
+<section class="sec parch cta" id="visit"><img class="cta-ornament" src="images/decor/ornament.svg" alt="" aria-hidden="true" />
   <div class="wrap">
     <div class="split">
       <div>
@@ -464,7 +492,7 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
 <footer class="site-foot">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <span class="logo-mark"><span class="logo-sun" aria-hidden="true"></span><span class="logo-txt">Summerfield<span>WALDORF SCHOOL &amp; FARM</span></span></span>
+      <img class="footer-logo" src="images/footer-logo.png" alt="Summerfield Waldorf School &amp; Farm — Celebrating 50 Years" />
       <p>A play-based, nature-rich Waldorf school on a working biodynamic farm in Santa Rosa, California. Serving Sonoma County families for over fifty years.</p>
     </div>
     <div class="foot-col"><h4>Explore</h4><a href="#">Why Waldorf</a><a href="#">Our Approach</a><a href="#">A Day Here</a><a href="#">The Research</a></div>
@@ -495,6 +523,42 @@ function carousel(trackId,dotsId,prevSel,nextSel){
 }
 carousel('gallery','galDots','[data-gal=prev]','[data-gal=next]');
 carousel('tTrack','tDots','[data-t=prev]','[data-t=next]');
+</script>
+<script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var sel='.hero-c,.sec-head,.card,.sys,.info-item,.gallery,.cap-row,.qcard,.brain-img,.testi,.faq,.cta .split>div';
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(e){e.classList.add('reveal');});
+  document.querySelectorAll('.cards .card').forEach(function(e,i){e.style.transitionDelay=((i%3)*0.09)+'s';});
+  document.querySelectorAll('.systems-grid .sys').forEach(function(e,i){e.style.transitionDelay=((i%2)*0.08)+'s';});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -7% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.acc details').forEach(function(d){
+    var p=d.querySelector('.panel'); var s=d.querySelector('summary'); if(!p||!s)return;
+    p.style.overflow='hidden';
+    if(d.open){p.style.height='auto';} else {p.style.height='0px';p.style.opacity='0';}
+    s.addEventListener('click',function(e){
+      e.preventDefault();
+      p.style.transition='height .32s cubic-bezier(.22,1,.36,1), opacity .26s ease';
+      if(!d.open){
+        d.open=true;
+        p.style.height='0px'; p.style.opacity='0';
+        var hh=p.scrollHeight;
+        requestAnimationFrame(function(){ p.style.height=hh+'px'; p.style.opacity='1'; });
+        p.addEventListener('transitionend',function te(ev){ if(ev.propertyName==='height'){p.style.height='auto'; p.removeEventListener('transitionend',te);} });
+      } else {
+        var hh=p.scrollHeight; p.style.height=hh+'px'; p.style.opacity='1';
+        requestAnimationFrame(function(){ p.style.height='0px'; p.style.opacity='0'; });
+        p.addEventListener('transitionend',function te(ev){ if(ev.propertyName==='height'){d.open=false; p.removeEventListener('transitionend',te);} });
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
