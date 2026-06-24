@@ -525,15 +525,19 @@ details[open]>summary .plus::after{transform:translateX(-50%) scaleY(0);opacity:
   n.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
 })();
-function carousel(trackId,dotsId,prevSel,nextSel){
+function carousel(trackId,dotsId,prevSel,nextSel,autoMs){
   var track=document.getElementById(trackId); if(!track)return;
-  var slides=track.querySelectorAll('.slide,.t-slide'); var dotsWrap=document.getElementById(dotsId); var i=0;
-  slides.forEach(function(_,k){var b=document.createElement('button');b.className='dot'+(k===0?' on':'');b.setAttribute('aria-label','Slide '+(k+1));b.addEventListener('click',function(){go(k);});dotsWrap.appendChild(b);});
+  var slides=track.querySelectorAll('.slide,.t-slide'); var dotsWrap=document.getElementById(dotsId); var i=0; var timer=null;
+  slides.forEach(function(_,k){var b=document.createElement('button');b.className='dot'+(k===0?' on':'');b.setAttribute('aria-label','Slide '+(k+1));b.addEventListener('click',function(){go(k);reset();});dotsWrap.appendChild(b);});
   function go(k){slides[i].classList.remove('on');dotsWrap.children[i].classList.remove('on');i=(k+slides.length)%slides.length;slides[i].classList.add('on');dotsWrap.children[i].classList.add('on');}
-  document.querySelector(prevSel).addEventListener('click',function(){go(i-1);});
-  document.querySelector(nextSel).addEventListener('click',function(){go(i+1);});
+  function start(){if(autoMs){timer=setInterval(function(){go(i+1);},autoMs);}}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function reset(){stop();start();}
+  document.querySelector(prevSel).addEventListener('click',function(){go(i-1);reset();});
+  document.querySelector(nextSel).addEventListener('click',function(){go(i+1);reset();});
+  if(autoMs){start();track.addEventListener('mouseenter',stop);track.addEventListener('mouseleave',start);}
 }
-carousel('gallery','galDots','[data-gal=prev]','[data-gal=next]');
+carousel('gallery','galDots','[data-gal=prev]','[data-gal=next]',2500);
 carousel('tTrack','tDots','[data-t=prev]','[data-t=next]');
 </script>
 <script>
